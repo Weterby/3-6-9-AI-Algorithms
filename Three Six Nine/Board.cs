@@ -12,10 +12,22 @@ namespace Three_Six_Nine
         private bool isPlayerTurn;
         private int p1Score;
         private int p2Score;
-        public int[] BoardTable { get; set; }
-        public bool IsPlayerTurn { get; set; }
-        public int P1Score { get; set; }
-        public int P2Score { get; set; }
+        public int[] BoardTable {
+            get { return boardTable; }
+            set { boardTable = value; }
+        }
+        public bool IsPlayerTurn {
+            get { return isPlayerTurn; }
+            set { isPlayerTurn = value; }
+        }
+        public int P1Score {
+            get { return p1Score; }
+            set { p1Score = value; }
+        }
+        public int P2Score {
+            get { return p2Score; }
+            set { p2Score = value; }
+        }
 
         public Board()
         {
@@ -44,10 +56,32 @@ namespace Three_Six_Nine
         {
 
         }
-
-        public int Evaluate(int[] gameState,int index)
+        public int CalculatePoints(int index)
         {
-            return 0;
+            int amount = 0;
+            int score = 0;
+            int offset = 9;
+            int rowIndex = (index / offset)*offset;
+            int colIndex = index % offset;
+            for (int i = rowIndex; i < rowIndex+offset; i++)
+            {
+                if (boardTable[i] == 1) amount++;
+            }
+
+            if (amount == 2) score++;
+            if (amount == 5) score+=2;
+            if (amount == 8) score+=3;
+            amount = 0;
+
+            for (int i = colIndex; i < boardTable.Length; i+=9)
+            {
+                if (boardTable[i] == 1) amount++;
+            }
+
+            if (amount == 2) score++;
+            if (amount == 5) score += 2;
+            if (amount == 8) score += 3;
+            return score;
         }
     }
 }
