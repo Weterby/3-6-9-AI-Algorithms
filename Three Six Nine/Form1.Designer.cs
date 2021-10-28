@@ -212,6 +212,7 @@ namespace Three_Six_Nine
             // 
             // button80
             // 
+            this.button80.Enabled = false;
             this.button80.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button80.FlatAppearance.BorderSize = 0;
             this.button80.Location = new System.Drawing.Point(454, 467);
@@ -223,6 +224,7 @@ namespace Three_Six_Nine
             // 
             // button79
             // 
+            this.button79.Enabled = false;
             this.button79.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button79.FlatAppearance.BorderSize = 0;
             this.button79.Location = new System.Drawing.Point(398, 467);
@@ -234,6 +236,7 @@ namespace Three_Six_Nine
             // 
             // button78
             // 
+            this.button78.Enabled = false;
             this.button78.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button78.FlatAppearance.BorderSize = 0;
             this.button78.Location = new System.Drawing.Point(342, 467);
@@ -245,6 +248,7 @@ namespace Three_Six_Nine
             // 
             // button77
             // 
+            this.button77.Enabled = false;
             this.button77.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button77.FlatAppearance.BorderSize = 0;
             this.button77.Location = new System.Drawing.Point(286, 467);
@@ -256,6 +260,7 @@ namespace Three_Six_Nine
             // 
             // button76
             // 
+            this.button76.Enabled = false;
             this.button76.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button76.FlatAppearance.BorderSize = 0;
             this.button76.Location = new System.Drawing.Point(230, 467);
@@ -267,6 +272,7 @@ namespace Three_Six_Nine
             // 
             // button75
             // 
+            this.button75.Enabled = false;
             this.button75.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button75.FlatAppearance.BorderSize = 0;
             this.button75.Location = new System.Drawing.Point(174, 467);
@@ -278,6 +284,7 @@ namespace Three_Six_Nine
             // 
             // button74
             // 
+            this.button74.Enabled = false;
             this.button74.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button74.FlatAppearance.BorderSize = 0;
             this.button74.Location = new System.Drawing.Point(118, 467);
@@ -289,6 +296,7 @@ namespace Three_Six_Nine
             // 
             // button73
             // 
+            this.button73.Enabled = false;
             this.button73.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button73.FlatAppearance.BorderSize = 0;
             this.button73.Location = new System.Drawing.Point(62, 467);
@@ -300,6 +308,7 @@ namespace Three_Six_Nine
             // 
             // button72
             // 
+            this.button72.Enabled = false;
             this.button72.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button72.FlatAppearance.BorderSize = 0;
             this.button72.Location = new System.Drawing.Point(6, 467);
@@ -311,6 +320,7 @@ namespace Three_Six_Nine
             // 
             // button71
             // 
+            this.button71.Enabled = false;
             this.button71.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button71.FlatAppearance.BorderSize = 0;
             this.button71.Location = new System.Drawing.Point(454, 411);
@@ -322,6 +332,7 @@ namespace Three_Six_Nine
             // 
             // button70
             // 
+            this.button70.Enabled = false;
             this.button70.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button70.FlatAppearance.BorderSize = 0;
             this.button70.Location = new System.Drawing.Point(398, 411);
@@ -333,6 +344,7 @@ namespace Three_Six_Nine
             // 
             // button69
             // 
+            this.button69.Enabled = false;
             this.button69.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button69.FlatAppearance.BorderSize = 0;
             this.button69.Location = new System.Drawing.Point(342, 411);
@@ -344,6 +356,7 @@ namespace Three_Six_Nine
             // 
             // button68
             // 
+            this.button68.Enabled = false;
             this.button68.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button68.FlatAppearance.BorderSize = 0;
             this.button68.Location = new System.Drawing.Point(286, 411);
@@ -355,6 +368,7 @@ namespace Three_Six_Nine
             // 
             // button67
             // 
+            this.button67.Enabled = false;
             this.button67.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button67.FlatAppearance.BorderSize = 0;
             this.button67.Location = new System.Drawing.Point(230, 411);
@@ -366,6 +380,7 @@ namespace Three_Six_Nine
             // 
             // button66
             // 
+            this.button66.Enabled = false;
             this.button66.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button66.FlatAppearance.BorderSize = 0;
             this.button66.Location = new System.Drawing.Point(174, 411);
@@ -377,6 +392,7 @@ namespace Three_Six_Nine
             // 
             // button65
             // 
+            this.button65.Enabled = false;
             this.button65.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button65.FlatAppearance.BorderSize = 0;
             this.button65.Location = new System.Drawing.Point(118, 411);
@@ -388,6 +404,7 @@ namespace Three_Six_Nine
             // 
             // button64
             // 
+            this.button64.Enabled = false;
             this.button64.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button64.FlatAppearance.BorderSize = 0;
             this.button64.Location = new System.Drawing.Point(62, 411);
@@ -399,6 +416,7 @@ namespace Three_Six_Nine
             // 
             // button63
             // 
+            this.button63.Enabled = false;
             this.button63.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button63.FlatAppearance.BorderSize = 0;
             this.button63.Location = new System.Drawing.Point(6, 411);
@@ -410,6 +428,7 @@ namespace Three_Six_Nine
             // 
             // button62
             // 
+            this.button62.Enabled = false;
             this.button62.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button62.FlatAppearance.BorderSize = 0;
             this.button62.Location = new System.Drawing.Point(454, 355);
@@ -421,6 +440,7 @@ namespace Three_Six_Nine
             // 
             // button61
             // 
+            this.button61.Enabled = false;
             this.button61.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button61.FlatAppearance.BorderSize = 0;
             this.button61.Location = new System.Drawing.Point(398, 355);
@@ -432,6 +452,7 @@ namespace Three_Six_Nine
             // 
             // button60
             // 
+            this.button60.Enabled = false;
             this.button60.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button60.FlatAppearance.BorderSize = 0;
             this.button60.Location = new System.Drawing.Point(342, 355);
@@ -443,6 +464,7 @@ namespace Three_Six_Nine
             // 
             // button59
             // 
+            this.button59.Enabled = false;
             this.button59.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button59.FlatAppearance.BorderSize = 0;
             this.button59.Location = new System.Drawing.Point(286, 355);
@@ -454,6 +476,7 @@ namespace Three_Six_Nine
             // 
             // button58
             // 
+            this.button58.Enabled = false;
             this.button58.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button58.FlatAppearance.BorderSize = 0;
             this.button58.Location = new System.Drawing.Point(230, 355);
@@ -465,6 +488,7 @@ namespace Three_Six_Nine
             // 
             // button57
             // 
+            this.button57.Enabled = false;
             this.button57.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button57.FlatAppearance.BorderSize = 0;
             this.button57.Location = new System.Drawing.Point(174, 355);
@@ -476,6 +500,7 @@ namespace Three_Six_Nine
             // 
             // button56
             // 
+            this.button56.Enabled = false;
             this.button56.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button56.FlatAppearance.BorderSize = 0;
             this.button56.Location = new System.Drawing.Point(118, 355);
@@ -487,6 +512,7 @@ namespace Three_Six_Nine
             // 
             // button55
             // 
+            this.button55.Enabled = false;
             this.button55.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button55.FlatAppearance.BorderSize = 0;
             this.button55.Location = new System.Drawing.Point(62, 355);
@@ -498,6 +524,7 @@ namespace Three_Six_Nine
             // 
             // button54
             // 
+            this.button54.Enabled = false;
             this.button54.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button54.FlatAppearance.BorderSize = 0;
             this.button54.Location = new System.Drawing.Point(6, 355);
@@ -509,6 +536,7 @@ namespace Three_Six_Nine
             // 
             // button53
             // 
+            this.button53.Enabled = false;
             this.button53.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button53.FlatAppearance.BorderSize = 0;
             this.button53.Location = new System.Drawing.Point(454, 299);
@@ -520,6 +548,7 @@ namespace Three_Six_Nine
             // 
             // button52
             // 
+            this.button52.Enabled = false;
             this.button52.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button52.FlatAppearance.BorderSize = 0;
             this.button52.Location = new System.Drawing.Point(398, 299);
@@ -531,6 +560,7 @@ namespace Three_Six_Nine
             // 
             // button51
             // 
+            this.button51.Enabled = false;
             this.button51.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button51.FlatAppearance.BorderSize = 0;
             this.button51.Location = new System.Drawing.Point(342, 299);
@@ -542,6 +572,7 @@ namespace Three_Six_Nine
             // 
             // button50
             // 
+            this.button50.Enabled = false;
             this.button50.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button50.FlatAppearance.BorderSize = 0;
             this.button50.Location = new System.Drawing.Point(286, 299);
@@ -553,6 +584,7 @@ namespace Three_Six_Nine
             // 
             // button49
             // 
+            this.button49.Enabled = false;
             this.button49.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button49.FlatAppearance.BorderSize = 0;
             this.button49.Location = new System.Drawing.Point(230, 299);
@@ -564,6 +596,7 @@ namespace Three_Six_Nine
             // 
             // button48
             // 
+            this.button48.Enabled = false;
             this.button48.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button48.FlatAppearance.BorderSize = 0;
             this.button48.Location = new System.Drawing.Point(174, 299);
@@ -575,6 +608,7 @@ namespace Three_Six_Nine
             // 
             // button47
             // 
+            this.button47.Enabled = false;
             this.button47.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button47.FlatAppearance.BorderSize = 0;
             this.button47.Location = new System.Drawing.Point(118, 299);
@@ -586,6 +620,7 @@ namespace Three_Six_Nine
             // 
             // button46
             // 
+            this.button46.Enabled = false;
             this.button46.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button46.FlatAppearance.BorderSize = 0;
             this.button46.Location = new System.Drawing.Point(62, 299);
@@ -597,6 +632,7 @@ namespace Three_Six_Nine
             // 
             // button45
             // 
+            this.button45.Enabled = false;
             this.button45.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button45.FlatAppearance.BorderSize = 0;
             this.button45.Location = new System.Drawing.Point(6, 299);
@@ -608,6 +644,7 @@ namespace Three_Six_Nine
             // 
             // button44
             // 
+            this.button44.Enabled = false;
             this.button44.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button44.FlatAppearance.BorderSize = 0;
             this.button44.Location = new System.Drawing.Point(454, 243);
@@ -619,6 +656,7 @@ namespace Three_Six_Nine
             // 
             // button43
             // 
+            this.button43.Enabled = false;
             this.button43.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button43.FlatAppearance.BorderSize = 0;
             this.button43.Location = new System.Drawing.Point(398, 243);
@@ -630,6 +668,7 @@ namespace Three_Six_Nine
             // 
             // button42
             // 
+            this.button42.Enabled = false;
             this.button42.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button42.FlatAppearance.BorderSize = 0;
             this.button42.Location = new System.Drawing.Point(342, 243);
@@ -641,6 +680,7 @@ namespace Three_Six_Nine
             // 
             // button41
             // 
+            this.button41.Enabled = false;
             this.button41.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button41.FlatAppearance.BorderSize = 0;
             this.button41.Location = new System.Drawing.Point(286, 243);
@@ -652,6 +692,7 @@ namespace Three_Six_Nine
             // 
             // button40
             // 
+            this.button40.Enabled = false;
             this.button40.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button40.FlatAppearance.BorderSize = 0;
             this.button40.Location = new System.Drawing.Point(230, 243);
@@ -663,6 +704,7 @@ namespace Three_Six_Nine
             // 
             // button39
             // 
+            this.button39.Enabled = false;
             this.button39.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button39.FlatAppearance.BorderSize = 0;
             this.button39.Location = new System.Drawing.Point(174, 243);
@@ -674,6 +716,7 @@ namespace Three_Six_Nine
             // 
             // button38
             // 
+            this.button38.Enabled = false;
             this.button38.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button38.FlatAppearance.BorderSize = 0;
             this.button38.Location = new System.Drawing.Point(118, 243);
@@ -685,6 +728,7 @@ namespace Three_Six_Nine
             // 
             // button37
             // 
+            this.button37.Enabled = false;
             this.button37.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button37.FlatAppearance.BorderSize = 0;
             this.button37.Location = new System.Drawing.Point(62, 243);
@@ -696,6 +740,7 @@ namespace Three_Six_Nine
             // 
             // button36
             // 
+            this.button36.Enabled = false;
             this.button36.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button36.FlatAppearance.BorderSize = 0;
             this.button36.Location = new System.Drawing.Point(6, 243);
@@ -707,6 +752,7 @@ namespace Three_Six_Nine
             // 
             // button35
             // 
+            this.button35.Enabled = false;
             this.button35.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button35.FlatAppearance.BorderSize = 0;
             this.button35.Location = new System.Drawing.Point(454, 187);
@@ -718,6 +764,7 @@ namespace Three_Six_Nine
             // 
             // button34
             // 
+            this.button34.Enabled = false;
             this.button34.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button34.FlatAppearance.BorderSize = 0;
             this.button34.Location = new System.Drawing.Point(398, 187);
@@ -729,6 +776,7 @@ namespace Three_Six_Nine
             // 
             // button33
             // 
+            this.button33.Enabled = false;
             this.button33.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button33.FlatAppearance.BorderSize = 0;
             this.button33.Location = new System.Drawing.Point(342, 187);
@@ -740,6 +788,7 @@ namespace Three_Six_Nine
             // 
             // button32
             // 
+            this.button32.Enabled = false;
             this.button32.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button32.FlatAppearance.BorderSize = 0;
             this.button32.Location = new System.Drawing.Point(286, 187);
@@ -751,6 +800,7 @@ namespace Three_Six_Nine
             // 
             // button31
             // 
+            this.button31.Enabled = false;
             this.button31.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button31.FlatAppearance.BorderSize = 0;
             this.button31.Location = new System.Drawing.Point(230, 187);
@@ -762,6 +812,7 @@ namespace Three_Six_Nine
             // 
             // button30
             // 
+            this.button30.Enabled = false;
             this.button30.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button30.FlatAppearance.BorderSize = 0;
             this.button30.Location = new System.Drawing.Point(174, 187);
@@ -773,6 +824,7 @@ namespace Three_Six_Nine
             // 
             // button29
             // 
+            this.button29.Enabled = false;
             this.button29.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button29.FlatAppearance.BorderSize = 0;
             this.button29.Location = new System.Drawing.Point(118, 187);
@@ -784,6 +836,7 @@ namespace Three_Six_Nine
             // 
             // button28
             // 
+            this.button28.Enabled = false;
             this.button28.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button28.FlatAppearance.BorderSize = 0;
             this.button28.Location = new System.Drawing.Point(62, 187);
@@ -795,6 +848,7 @@ namespace Three_Six_Nine
             // 
             // button27
             // 
+            this.button27.Enabled = false;
             this.button27.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button27.FlatAppearance.BorderSize = 0;
             this.button27.Location = new System.Drawing.Point(6, 187);
@@ -806,6 +860,7 @@ namespace Three_Six_Nine
             // 
             // button26
             // 
+            this.button26.Enabled = false;
             this.button26.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button26.FlatAppearance.BorderSize = 0;
             this.button26.Location = new System.Drawing.Point(454, 131);
@@ -817,6 +872,7 @@ namespace Three_Six_Nine
             // 
             // button25
             // 
+            this.button25.Enabled = false;
             this.button25.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button25.FlatAppearance.BorderSize = 0;
             this.button25.Location = new System.Drawing.Point(398, 131);
@@ -828,6 +884,7 @@ namespace Three_Six_Nine
             // 
             // button24
             // 
+            this.button24.Enabled = false;
             this.button24.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button24.FlatAppearance.BorderSize = 0;
             this.button24.Location = new System.Drawing.Point(342, 131);
@@ -839,6 +896,7 @@ namespace Three_Six_Nine
             // 
             // button23
             // 
+            this.button23.Enabled = false;
             this.button23.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button23.FlatAppearance.BorderSize = 0;
             this.button23.Location = new System.Drawing.Point(286, 131);
@@ -850,6 +908,7 @@ namespace Three_Six_Nine
             // 
             // button22
             // 
+            this.button22.Enabled = false;
             this.button22.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button22.FlatAppearance.BorderSize = 0;
             this.button22.Location = new System.Drawing.Point(230, 131);
@@ -861,6 +920,7 @@ namespace Three_Six_Nine
             // 
             // button21
             // 
+            this.button21.Enabled = false;
             this.button21.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button21.FlatAppearance.BorderSize = 0;
             this.button21.Location = new System.Drawing.Point(174, 131);
@@ -872,6 +932,7 @@ namespace Three_Six_Nine
             // 
             // button20
             // 
+            this.button20.Enabled = false;
             this.button20.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button20.FlatAppearance.BorderSize = 0;
             this.button20.Location = new System.Drawing.Point(118, 131);
@@ -883,6 +944,7 @@ namespace Three_Six_Nine
             // 
             // button19
             // 
+            this.button19.Enabled = false;
             this.button19.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button19.FlatAppearance.BorderSize = 0;
             this.button19.Location = new System.Drawing.Point(62, 131);
@@ -894,6 +956,7 @@ namespace Three_Six_Nine
             // 
             // button18
             // 
+            this.button18.Enabled = false;
             this.button18.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button18.FlatAppearance.BorderSize = 0;
             this.button18.Location = new System.Drawing.Point(6, 131);
@@ -905,6 +968,7 @@ namespace Three_Six_Nine
             // 
             // button17
             // 
+            this.button17.Enabled = false;
             this.button17.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button17.FlatAppearance.BorderSize = 0;
             this.button17.Location = new System.Drawing.Point(454, 75);
@@ -916,6 +980,7 @@ namespace Three_Six_Nine
             // 
             // button16
             // 
+            this.button16.Enabled = false;
             this.button16.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button16.FlatAppearance.BorderSize = 0;
             this.button16.Location = new System.Drawing.Point(398, 75);
@@ -927,6 +992,7 @@ namespace Three_Six_Nine
             // 
             // button15
             // 
+            this.button15.Enabled = false;
             this.button15.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button15.FlatAppearance.BorderSize = 0;
             this.button15.Location = new System.Drawing.Point(342, 75);
@@ -938,6 +1004,7 @@ namespace Three_Six_Nine
             // 
             // button14
             // 
+            this.button14.Enabled = false;
             this.button14.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button14.FlatAppearance.BorderSize = 0;
             this.button14.Location = new System.Drawing.Point(286, 75);
@@ -949,6 +1016,7 @@ namespace Three_Six_Nine
             // 
             // button13
             // 
+            this.button13.Enabled = false;
             this.button13.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button13.FlatAppearance.BorderSize = 0;
             this.button13.Location = new System.Drawing.Point(230, 75);
@@ -960,6 +1028,7 @@ namespace Three_Six_Nine
             // 
             // button12
             // 
+            this.button12.Enabled = false;
             this.button12.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button12.FlatAppearance.BorderSize = 0;
             this.button12.Location = new System.Drawing.Point(174, 75);
@@ -971,6 +1040,7 @@ namespace Three_Six_Nine
             // 
             // button11
             // 
+            this.button11.Enabled = false;
             this.button11.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button11.FlatAppearance.BorderSize = 0;
             this.button11.Location = new System.Drawing.Point(118, 75);
@@ -982,6 +1052,7 @@ namespace Three_Six_Nine
             // 
             // button10
             // 
+            this.button10.Enabled = false;
             this.button10.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button10.FlatAppearance.BorderSize = 0;
             this.button10.Location = new System.Drawing.Point(62, 75);
@@ -993,6 +1064,7 @@ namespace Three_Six_Nine
             // 
             // button9
             // 
+            this.button9.Enabled = false;
             this.button9.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button9.FlatAppearance.BorderSize = 0;
             this.button9.Location = new System.Drawing.Point(6, 75);
@@ -1004,6 +1076,7 @@ namespace Three_Six_Nine
             // 
             // button8
             // 
+            this.button8.Enabled = false;
             this.button8.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button8.FlatAppearance.BorderSize = 0;
             this.button8.Location = new System.Drawing.Point(454, 19);
@@ -1015,6 +1088,7 @@ namespace Three_Six_Nine
             // 
             // button7
             // 
+            this.button7.Enabled = false;
             this.button7.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button7.FlatAppearance.BorderSize = 0;
             this.button7.Location = new System.Drawing.Point(398, 19);
@@ -1026,6 +1100,7 @@ namespace Three_Six_Nine
             // 
             // button6
             // 
+            this.button6.Enabled = false;
             this.button6.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button6.FlatAppearance.BorderSize = 0;
             this.button6.Location = new System.Drawing.Point(342, 19);
@@ -1037,6 +1112,7 @@ namespace Three_Six_Nine
             // 
             // button5
             // 
+            this.button5.Enabled = false;
             this.button5.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button5.FlatAppearance.BorderSize = 0;
             this.button5.Location = new System.Drawing.Point(286, 19);
@@ -1048,6 +1124,7 @@ namespace Three_Six_Nine
             // 
             // button4
             // 
+            this.button4.Enabled = false;
             this.button4.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button4.FlatAppearance.BorderSize = 0;
             this.button4.Location = new System.Drawing.Point(230, 19);
@@ -1059,6 +1136,7 @@ namespace Three_Six_Nine
             // 
             // button3
             // 
+            this.button3.Enabled = false;
             this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button3.FlatAppearance.BorderSize = 0;
             this.button3.Location = new System.Drawing.Point(174, 19);
@@ -1070,6 +1148,7 @@ namespace Three_Six_Nine
             // 
             // button2
             // 
+            this.button2.Enabled = false;
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button2.FlatAppearance.BorderSize = 0;
             this.button2.Location = new System.Drawing.Point(118, 19);
@@ -1081,6 +1160,7 @@ namespace Three_Six_Nine
             // 
             // button1
             // 
+            this.button1.Enabled = false;
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.Location = new System.Drawing.Point(62, 19);
@@ -1092,6 +1172,7 @@ namespace Three_Six_Nine
             // 
             // button0
             // 
+            this.button0.Enabled = false;
             this.button0.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.button0.FlatAppearance.BorderSize = 0;
             this.button0.Location = new System.Drawing.Point(6, 19);

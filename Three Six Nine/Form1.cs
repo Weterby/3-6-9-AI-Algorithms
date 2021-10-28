@@ -31,7 +31,6 @@ namespace Three_Six_Nine
 
         }
 
-
         private void onBtnClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -42,7 +41,7 @@ namespace Three_Six_Nine
 
         private void BtnCreateNewGame(object sender, EventArgs e)
         {
-            
+            foreach (Button btn in buttons) btn.Enabled=true;
         }
     }
 }
