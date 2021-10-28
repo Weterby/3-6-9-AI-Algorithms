@@ -61,6 +61,8 @@ namespace Three_Six_Nine
                 }
                 board.IsPlayerTurn = !board.IsPlayerTurn;
             }
+            List<int> list = board.getAllEmptyCellsIndexes(board.BoardTable);
+            if (list.Count() == 0) MessageBox.Show("Player " + board.CheckWinner() + " wins!");
         }
 
         private void BtnCreateNewGame(object sender, EventArgs e)

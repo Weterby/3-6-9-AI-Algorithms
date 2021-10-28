@@ -47,9 +47,9 @@ namespace Three_Six_Nine
             return indexes;
         }
 
-        public int CheckWinner(int p1,int p2)
+        public int CheckWinner()
         {
-            return p1 > p2 ? 1 : 2;
+            return p1Score > p2Score ? 1 : 2;
         }
 
         public void SetupBoard()
