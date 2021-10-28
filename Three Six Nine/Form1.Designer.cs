@@ -112,8 +112,10 @@ namespace Three_Six_Nine
             this.pictureBox79 = new System.Windows.Forms.PictureBox();
             this.pictureBox80 = new System.Windows.Forms.PictureBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.p1Label = new System.Windows.Forms.Label();
+            this.p2Label = new System.Windows.Forms.Label();
+            this.newGameBtn = new System.Windows.Forms.Button();
+            this.pictureBox81 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox0)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -197,6 +199,7 @@ namespace Three_Six_Nine
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).BeginInit();
             this.groupBox2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -298,6 +301,7 @@ namespace Three_Six_Nine
             this.pictureBox0.Size = new System.Drawing.Size(50, 50);
             this.pictureBox0.TabIndex = 0;
             this.pictureBox0.TabStop = false;
+            this.pictureBox0.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox1
             // 
@@ -309,6 +313,7 @@ namespace Three_Six_Nine
             this.pictureBox1.Size = new System.Drawing.Size(50, 50);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox2
             // 
@@ -320,6 +325,7 @@ namespace Three_Six_Nine
             this.pictureBox2.Size = new System.Drawing.Size(50, 50);
             this.pictureBox2.TabIndex = 2;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox3
             // 
@@ -331,6 +337,7 @@ namespace Three_Six_Nine
             this.pictureBox3.Size = new System.Drawing.Size(50, 50);
             this.pictureBox3.TabIndex = 3;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox4
             // 
@@ -342,6 +349,7 @@ namespace Three_Six_Nine
             this.pictureBox4.Size = new System.Drawing.Size(50, 50);
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox5
             // 
@@ -353,6 +361,7 @@ namespace Three_Six_Nine
             this.pictureBox5.Size = new System.Drawing.Size(50, 50);
             this.pictureBox5.TabIndex = 5;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox6
             // 
@@ -364,6 +373,7 @@ namespace Three_Six_Nine
             this.pictureBox6.Size = new System.Drawing.Size(50, 50);
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox7
             // 
@@ -375,6 +385,7 @@ namespace Three_Six_Nine
             this.pictureBox7.Size = new System.Drawing.Size(50, 50);
             this.pictureBox7.TabIndex = 7;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox8
             // 
@@ -386,6 +397,7 @@ namespace Three_Six_Nine
             this.pictureBox8.Size = new System.Drawing.Size(50, 50);
             this.pictureBox8.TabIndex = 8;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox9
             // 
@@ -397,6 +409,7 @@ namespace Three_Six_Nine
             this.pictureBox9.Size = new System.Drawing.Size(50, 50);
             this.pictureBox9.TabIndex = 9;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox10
             // 
@@ -408,6 +421,7 @@ namespace Three_Six_Nine
             this.pictureBox10.Size = new System.Drawing.Size(50, 50);
             this.pictureBox10.TabIndex = 10;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox11
             // 
@@ -419,6 +433,7 @@ namespace Three_Six_Nine
             this.pictureBox11.Size = new System.Drawing.Size(50, 50);
             this.pictureBox11.TabIndex = 11;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox12
             // 
@@ -430,6 +445,7 @@ namespace Three_Six_Nine
             this.pictureBox12.Size = new System.Drawing.Size(50, 50);
             this.pictureBox12.TabIndex = 12;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox13
             // 
@@ -441,6 +457,7 @@ namespace Three_Six_Nine
             this.pictureBox13.Size = new System.Drawing.Size(50, 50);
             this.pictureBox13.TabIndex = 13;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox14
             // 
@@ -452,6 +469,7 @@ namespace Three_Six_Nine
             this.pictureBox14.Size = new System.Drawing.Size(50, 50);
             this.pictureBox14.TabIndex = 14;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox15
             // 
@@ -463,6 +481,7 @@ namespace Three_Six_Nine
             this.pictureBox15.Size = new System.Drawing.Size(50, 50);
             this.pictureBox15.TabIndex = 15;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox16
             // 
@@ -474,6 +493,7 @@ namespace Three_Six_Nine
             this.pictureBox16.Size = new System.Drawing.Size(50, 50);
             this.pictureBox16.TabIndex = 16;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox17
             // 
@@ -485,6 +505,7 @@ namespace Three_Six_Nine
             this.pictureBox17.Size = new System.Drawing.Size(50, 50);
             this.pictureBox17.TabIndex = 17;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox18
             // 
@@ -496,6 +517,7 @@ namespace Three_Six_Nine
             this.pictureBox18.Size = new System.Drawing.Size(50, 50);
             this.pictureBox18.TabIndex = 18;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox19
             // 
@@ -507,6 +529,7 @@ namespace Three_Six_Nine
             this.pictureBox19.Size = new System.Drawing.Size(50, 50);
             this.pictureBox19.TabIndex = 19;
             this.pictureBox19.TabStop = false;
+            this.pictureBox19.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox20
             // 
@@ -518,6 +541,7 @@ namespace Three_Six_Nine
             this.pictureBox20.Size = new System.Drawing.Size(50, 50);
             this.pictureBox20.TabIndex = 20;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox21
             // 
@@ -529,6 +553,7 @@ namespace Three_Six_Nine
             this.pictureBox21.Size = new System.Drawing.Size(50, 50);
             this.pictureBox21.TabIndex = 21;
             this.pictureBox21.TabStop = false;
+            this.pictureBox21.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox22
             // 
@@ -540,6 +565,7 @@ namespace Three_Six_Nine
             this.pictureBox22.Size = new System.Drawing.Size(50, 50);
             this.pictureBox22.TabIndex = 22;
             this.pictureBox22.TabStop = false;
+            this.pictureBox22.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox23
             // 
@@ -551,6 +577,7 @@ namespace Three_Six_Nine
             this.pictureBox23.Size = new System.Drawing.Size(50, 50);
             this.pictureBox23.TabIndex = 23;
             this.pictureBox23.TabStop = false;
+            this.pictureBox23.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox24
             // 
@@ -562,6 +589,7 @@ namespace Three_Six_Nine
             this.pictureBox24.Size = new System.Drawing.Size(50, 50);
             this.pictureBox24.TabIndex = 24;
             this.pictureBox24.TabStop = false;
+            this.pictureBox24.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox25
             // 
@@ -573,6 +601,7 @@ namespace Three_Six_Nine
             this.pictureBox25.Size = new System.Drawing.Size(50, 50);
             this.pictureBox25.TabIndex = 25;
             this.pictureBox25.TabStop = false;
+            this.pictureBox25.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox26
             // 
@@ -584,6 +613,7 @@ namespace Three_Six_Nine
             this.pictureBox26.Size = new System.Drawing.Size(50, 50);
             this.pictureBox26.TabIndex = 26;
             this.pictureBox26.TabStop = false;
+            this.pictureBox26.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox27
             // 
@@ -595,6 +625,7 @@ namespace Three_Six_Nine
             this.pictureBox27.Size = new System.Drawing.Size(50, 50);
             this.pictureBox27.TabIndex = 27;
             this.pictureBox27.TabStop = false;
+            this.pictureBox27.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox28
             // 
@@ -606,6 +637,7 @@ namespace Three_Six_Nine
             this.pictureBox28.Size = new System.Drawing.Size(50, 50);
             this.pictureBox28.TabIndex = 28;
             this.pictureBox28.TabStop = false;
+            this.pictureBox28.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox29
             // 
@@ -617,6 +649,7 @@ namespace Three_Six_Nine
             this.pictureBox29.Size = new System.Drawing.Size(50, 50);
             this.pictureBox29.TabIndex = 29;
             this.pictureBox29.TabStop = false;
+            this.pictureBox29.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox30
             // 
@@ -639,6 +672,7 @@ namespace Three_Six_Nine
             this.pictureBox31.Size = new System.Drawing.Size(50, 50);
             this.pictureBox31.TabIndex = 31;
             this.pictureBox31.TabStop = false;
+            this.pictureBox31.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox32
             // 
@@ -650,6 +684,7 @@ namespace Three_Six_Nine
             this.pictureBox32.Size = new System.Drawing.Size(50, 50);
             this.pictureBox32.TabIndex = 32;
             this.pictureBox32.TabStop = false;
+            this.pictureBox32.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox33
             // 
@@ -661,6 +696,7 @@ namespace Three_Six_Nine
             this.pictureBox33.Size = new System.Drawing.Size(50, 50);
             this.pictureBox33.TabIndex = 33;
             this.pictureBox33.TabStop = false;
+            this.pictureBox33.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox34
             // 
@@ -672,6 +708,7 @@ namespace Three_Six_Nine
             this.pictureBox34.Size = new System.Drawing.Size(50, 50);
             this.pictureBox34.TabIndex = 34;
             this.pictureBox34.TabStop = false;
+            this.pictureBox34.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox35
             // 
@@ -683,6 +720,7 @@ namespace Three_Six_Nine
             this.pictureBox35.Size = new System.Drawing.Size(50, 50);
             this.pictureBox35.TabIndex = 35;
             this.pictureBox35.TabStop = false;
+            this.pictureBox35.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox36
             // 
@@ -694,6 +732,7 @@ namespace Three_Six_Nine
             this.pictureBox36.Size = new System.Drawing.Size(50, 50);
             this.pictureBox36.TabIndex = 36;
             this.pictureBox36.TabStop = false;
+            this.pictureBox36.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox37
             // 
@@ -705,6 +744,7 @@ namespace Three_Six_Nine
             this.pictureBox37.Size = new System.Drawing.Size(50, 50);
             this.pictureBox37.TabIndex = 37;
             this.pictureBox37.TabStop = false;
+            this.pictureBox37.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox38
             // 
@@ -716,6 +756,7 @@ namespace Three_Six_Nine
             this.pictureBox38.Size = new System.Drawing.Size(50, 50);
             this.pictureBox38.TabIndex = 38;
             this.pictureBox38.TabStop = false;
+            this.pictureBox38.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox39
             // 
@@ -727,6 +768,7 @@ namespace Three_Six_Nine
             this.pictureBox39.Size = new System.Drawing.Size(50, 50);
             this.pictureBox39.TabIndex = 39;
             this.pictureBox39.TabStop = false;
+            this.pictureBox39.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox40
             // 
@@ -738,6 +780,7 @@ namespace Three_Six_Nine
             this.pictureBox40.Size = new System.Drawing.Size(50, 50);
             this.pictureBox40.TabIndex = 40;
             this.pictureBox40.TabStop = false;
+            this.pictureBox40.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox41
             // 
@@ -749,6 +792,7 @@ namespace Three_Six_Nine
             this.pictureBox41.Size = new System.Drawing.Size(50, 50);
             this.pictureBox41.TabIndex = 41;
             this.pictureBox41.TabStop = false;
+            this.pictureBox41.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox42
             // 
@@ -760,6 +804,7 @@ namespace Three_Six_Nine
             this.pictureBox42.Size = new System.Drawing.Size(50, 50);
             this.pictureBox42.TabIndex = 42;
             this.pictureBox42.TabStop = false;
+            this.pictureBox42.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox43
             // 
@@ -771,6 +816,7 @@ namespace Three_Six_Nine
             this.pictureBox43.Size = new System.Drawing.Size(50, 50);
             this.pictureBox43.TabIndex = 43;
             this.pictureBox43.TabStop = false;
+            this.pictureBox43.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox44
             // 
@@ -782,6 +828,7 @@ namespace Three_Six_Nine
             this.pictureBox44.Size = new System.Drawing.Size(50, 50);
             this.pictureBox44.TabIndex = 44;
             this.pictureBox44.TabStop = false;
+            this.pictureBox44.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox45
             // 
@@ -793,6 +840,7 @@ namespace Three_Six_Nine
             this.pictureBox45.Size = new System.Drawing.Size(50, 50);
             this.pictureBox45.TabIndex = 45;
             this.pictureBox45.TabStop = false;
+            this.pictureBox45.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox46
             // 
@@ -804,6 +852,7 @@ namespace Three_Six_Nine
             this.pictureBox46.Size = new System.Drawing.Size(50, 50);
             this.pictureBox46.TabIndex = 46;
             this.pictureBox46.TabStop = false;
+            this.pictureBox46.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox47
             // 
@@ -815,6 +864,7 @@ namespace Three_Six_Nine
             this.pictureBox47.Size = new System.Drawing.Size(50, 50);
             this.pictureBox47.TabIndex = 47;
             this.pictureBox47.TabStop = false;
+            this.pictureBox47.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox48
             // 
@@ -826,6 +876,7 @@ namespace Three_Six_Nine
             this.pictureBox48.Size = new System.Drawing.Size(50, 50);
             this.pictureBox48.TabIndex = 48;
             this.pictureBox48.TabStop = false;
+            this.pictureBox48.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox49
             // 
@@ -837,6 +888,7 @@ namespace Three_Six_Nine
             this.pictureBox49.Size = new System.Drawing.Size(50, 50);
             this.pictureBox49.TabIndex = 49;
             this.pictureBox49.TabStop = false;
+            this.pictureBox49.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox50
             // 
@@ -848,6 +900,7 @@ namespace Three_Six_Nine
             this.pictureBox50.Size = new System.Drawing.Size(50, 50);
             this.pictureBox50.TabIndex = 50;
             this.pictureBox50.TabStop = false;
+            this.pictureBox50.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox51
             // 
@@ -859,6 +912,7 @@ namespace Three_Six_Nine
             this.pictureBox51.Size = new System.Drawing.Size(50, 50);
             this.pictureBox51.TabIndex = 51;
             this.pictureBox51.TabStop = false;
+            this.pictureBox51.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox52
             // 
@@ -870,6 +924,7 @@ namespace Three_Six_Nine
             this.pictureBox52.Size = new System.Drawing.Size(50, 50);
             this.pictureBox52.TabIndex = 52;
             this.pictureBox52.TabStop = false;
+            this.pictureBox52.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox53
             // 
@@ -881,6 +936,7 @@ namespace Three_Six_Nine
             this.pictureBox53.Size = new System.Drawing.Size(50, 50);
             this.pictureBox53.TabIndex = 53;
             this.pictureBox53.TabStop = false;
+            this.pictureBox53.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox54
             // 
@@ -892,6 +948,7 @@ namespace Three_Six_Nine
             this.pictureBox54.Size = new System.Drawing.Size(50, 50);
             this.pictureBox54.TabIndex = 54;
             this.pictureBox54.TabStop = false;
+            this.pictureBox54.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox55
             // 
@@ -903,6 +960,7 @@ namespace Three_Six_Nine
             this.pictureBox55.Size = new System.Drawing.Size(50, 50);
             this.pictureBox55.TabIndex = 55;
             this.pictureBox55.TabStop = false;
+            this.pictureBox55.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox56
             // 
@@ -914,6 +972,7 @@ namespace Three_Six_Nine
             this.pictureBox56.Size = new System.Drawing.Size(50, 50);
             this.pictureBox56.TabIndex = 56;
             this.pictureBox56.TabStop = false;
+            this.pictureBox56.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox57
             // 
@@ -925,6 +984,7 @@ namespace Three_Six_Nine
             this.pictureBox57.Size = new System.Drawing.Size(50, 50);
             this.pictureBox57.TabIndex = 57;
             this.pictureBox57.TabStop = false;
+            this.pictureBox57.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox58
             // 
@@ -936,6 +996,7 @@ namespace Three_Six_Nine
             this.pictureBox58.Size = new System.Drawing.Size(50, 50);
             this.pictureBox58.TabIndex = 58;
             this.pictureBox58.TabStop = false;
+            this.pictureBox58.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox59
             // 
@@ -947,6 +1008,7 @@ namespace Three_Six_Nine
             this.pictureBox59.Size = new System.Drawing.Size(50, 50);
             this.pictureBox59.TabIndex = 59;
             this.pictureBox59.TabStop = false;
+            this.pictureBox59.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox60
             // 
@@ -958,6 +1020,7 @@ namespace Three_Six_Nine
             this.pictureBox60.Size = new System.Drawing.Size(50, 50);
             this.pictureBox60.TabIndex = 60;
             this.pictureBox60.TabStop = false;
+            this.pictureBox60.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox61
             // 
@@ -969,6 +1032,7 @@ namespace Three_Six_Nine
             this.pictureBox61.Size = new System.Drawing.Size(50, 50);
             this.pictureBox61.TabIndex = 61;
             this.pictureBox61.TabStop = false;
+            this.pictureBox61.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox62
             // 
@@ -980,6 +1044,7 @@ namespace Three_Six_Nine
             this.pictureBox62.Size = new System.Drawing.Size(50, 50);
             this.pictureBox62.TabIndex = 62;
             this.pictureBox62.TabStop = false;
+            this.pictureBox62.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox63
             // 
@@ -991,6 +1056,7 @@ namespace Three_Six_Nine
             this.pictureBox63.Size = new System.Drawing.Size(50, 50);
             this.pictureBox63.TabIndex = 63;
             this.pictureBox63.TabStop = false;
+            this.pictureBox63.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox64
             // 
@@ -1002,6 +1068,7 @@ namespace Three_Six_Nine
             this.pictureBox64.Size = new System.Drawing.Size(50, 50);
             this.pictureBox64.TabIndex = 64;
             this.pictureBox64.TabStop = false;
+            this.pictureBox64.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox65
             // 
@@ -1013,6 +1080,7 @@ namespace Three_Six_Nine
             this.pictureBox65.Size = new System.Drawing.Size(50, 50);
             this.pictureBox65.TabIndex = 65;
             this.pictureBox65.TabStop = false;
+            this.pictureBox65.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox66
             // 
@@ -1024,6 +1092,7 @@ namespace Three_Six_Nine
             this.pictureBox66.Size = new System.Drawing.Size(50, 50);
             this.pictureBox66.TabIndex = 66;
             this.pictureBox66.TabStop = false;
+            this.pictureBox66.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox67
             // 
@@ -1035,6 +1104,7 @@ namespace Three_Six_Nine
             this.pictureBox67.Size = new System.Drawing.Size(50, 50);
             this.pictureBox67.TabIndex = 67;
             this.pictureBox67.TabStop = false;
+            this.pictureBox67.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox68
             // 
@@ -1046,6 +1116,7 @@ namespace Three_Six_Nine
             this.pictureBox68.Size = new System.Drawing.Size(50, 50);
             this.pictureBox68.TabIndex = 68;
             this.pictureBox68.TabStop = false;
+            this.pictureBox68.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox69
             // 
@@ -1057,6 +1128,7 @@ namespace Three_Six_Nine
             this.pictureBox69.Size = new System.Drawing.Size(50, 50);
             this.pictureBox69.TabIndex = 69;
             this.pictureBox69.TabStop = false;
+            this.pictureBox69.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox70
             // 
@@ -1068,6 +1140,7 @@ namespace Three_Six_Nine
             this.pictureBox70.Size = new System.Drawing.Size(50, 50);
             this.pictureBox70.TabIndex = 70;
             this.pictureBox70.TabStop = false;
+            this.pictureBox70.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox71
             // 
@@ -1079,6 +1152,7 @@ namespace Three_Six_Nine
             this.pictureBox71.Size = new System.Drawing.Size(50, 50);
             this.pictureBox71.TabIndex = 71;
             this.pictureBox71.TabStop = false;
+            this.pictureBox71.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox72
             // 
@@ -1090,6 +1164,7 @@ namespace Three_Six_Nine
             this.pictureBox72.Size = new System.Drawing.Size(50, 50);
             this.pictureBox72.TabIndex = 72;
             this.pictureBox72.TabStop = false;
+            this.pictureBox72.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox73
             // 
@@ -1101,6 +1176,7 @@ namespace Three_Six_Nine
             this.pictureBox73.Size = new System.Drawing.Size(50, 50);
             this.pictureBox73.TabIndex = 73;
             this.pictureBox73.TabStop = false;
+            this.pictureBox73.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox74
             // 
@@ -1112,6 +1188,7 @@ namespace Three_Six_Nine
             this.pictureBox74.Size = new System.Drawing.Size(50, 50);
             this.pictureBox74.TabIndex = 74;
             this.pictureBox74.TabStop = false;
+            this.pictureBox74.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox75
             // 
@@ -1123,6 +1200,7 @@ namespace Three_Six_Nine
             this.pictureBox75.Size = new System.Drawing.Size(50, 50);
             this.pictureBox75.TabIndex = 75;
             this.pictureBox75.TabStop = false;
+            this.pictureBox75.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox76
             // 
@@ -1134,6 +1212,7 @@ namespace Three_Six_Nine
             this.pictureBox76.Size = new System.Drawing.Size(50, 50);
             this.pictureBox76.TabIndex = 76;
             this.pictureBox76.TabStop = false;
+            this.pictureBox76.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox77
             // 
@@ -1145,6 +1224,7 @@ namespace Three_Six_Nine
             this.pictureBox77.Size = new System.Drawing.Size(50, 50);
             this.pictureBox77.TabIndex = 77;
             this.pictureBox77.TabStop = false;
+            this.pictureBox77.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox78
             // 
@@ -1156,6 +1236,7 @@ namespace Three_Six_Nine
             this.pictureBox78.Size = new System.Drawing.Size(50, 50);
             this.pictureBox78.TabIndex = 78;
             this.pictureBox78.TabStop = false;
+            this.pictureBox78.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox79
             // 
@@ -1167,6 +1248,7 @@ namespace Three_Six_Nine
             this.pictureBox79.Size = new System.Drawing.Size(50, 50);
             this.pictureBox79.TabIndex = 79;
             this.pictureBox79.TabStop = false;
+            this.pictureBox79.Click += new System.EventHandler(this.OnClick);
             // 
             // pictureBox80
             // 
@@ -1178,34 +1260,55 @@ namespace Three_Six_Nine
             this.pictureBox80.Size = new System.Drawing.Size(50, 50);
             this.pictureBox80.TabIndex = 80;
             this.pictureBox80.TabStop = false;
+            this.pictureBox80.Click += new System.EventHandler(this.OnClick);
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.label2);
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.pictureBox81);
+            this.groupBox2.Controls.Add(this.newGameBtn);
+            this.groupBox2.Controls.Add(this.p2Label);
+            this.groupBox2.Controls.Add(this.p1Label);
             this.groupBox2.Location = new System.Drawing.Point(528, 12);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(200, 519);
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // label1
+            // p1Label
             // 
-            this.label1.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(7, 10);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(187, 30);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Player 1: 0";
+            this.p1Label.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.p1Label.Location = new System.Drawing.Point(7, 10);
+            this.p1Label.Name = "p1Label";
+            this.p1Label.Size = new System.Drawing.Size(187, 30);
+            this.p1Label.TabIndex = 0;
+            this.p1Label.Text = "Player 1: 0";
             // 
-            // label2
+            // p2Label
             // 
-            this.label2.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(7, 40);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(187, 30);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Player 2: 0";
+            this.p2Label.Font = new System.Drawing.Font("Century", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.p2Label.Location = new System.Drawing.Point(7, 40);
+            this.p2Label.Name = "p2Label";
+            this.p2Label.Size = new System.Drawing.Size(187, 30);
+            this.p2Label.TabIndex = 1;
+            this.p2Label.Text = "Player 2: 0";
+            // 
+            // newGameBtn
+            // 
+            this.newGameBtn.Location = new System.Drawing.Point(6, 458);
+            this.newGameBtn.Name = "newGameBtn";
+            this.newGameBtn.Size = new System.Drawing.Size(188, 50);
+            this.newGameBtn.TabIndex = 2;
+            this.newGameBtn.Text = "New Game";
+            this.newGameBtn.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox81
+            // 
+            this.pictureBox81.Image = global::Three_Six_Nine.Properties.Resources.circle;
+            this.pictureBox81.Location = new System.Drawing.Point(74, 402);
+            this.pictureBox81.Name = "pictureBox81";
+            this.pictureBox81.Size = new System.Drawing.Size(50, 50);
+            this.pictureBox81.TabIndex = 3;
+            this.pictureBox81.TabStop = false;
             // 
             // Form1
             // 
@@ -1302,6 +1405,7 @@ namespace Three_Six_Nine
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox79)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox80)).EndInit();
             this.groupBox2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1390,8 +1494,10 @@ namespace Three_Six_Nine
         private System.Windows.Forms.PictureBox pictureBox10;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label p2Label;
+        private System.Windows.Forms.Label p1Label;
+        private System.Windows.Forms.Button newGameBtn;
+        private System.Windows.Forms.PictureBox pictureBox81;
     }
 }
 

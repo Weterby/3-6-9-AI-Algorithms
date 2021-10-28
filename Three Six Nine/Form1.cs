@@ -21,5 +21,11 @@ namespace Three_Six_Nine
         {
 
         }
+
+        private void OnClick(object sender, EventArgs e)
+        {
+            PictureBox pb = sender as PictureBox;
+            MessageBox.Show("clicked " + pb.Name);
+        }
     }
 }
