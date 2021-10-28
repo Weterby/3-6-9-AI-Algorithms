@@ -22,10 +22,13 @@ namespace Three_Six_Nine
 
         }
 
-        private void OnClick(object sender, EventArgs e)
+
+        private void onBtnClick(object sender, EventArgs e)
         {
-            PictureBox pb = sender as PictureBox;
-            MessageBox.Show("clicked " + pb.Name);
+            Button btn = sender as Button;
+            MessageBox.Show("clicked " + btn.Name);
+            btn.BackColor = Color.Black;
+            btn.Enabled = false;
         }
     }
 }
