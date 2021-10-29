@@ -47,22 +47,27 @@ namespace Three_Six_Nine
             }
             else
             {
-                int points = board.CalculatePoints(index);
+                int score = board.CalculatePoints(index);
                 board.BoardTable[index] = 1;
-                if (board.IsPlayerTurn)
-                {
-                    board.P1Score += points;
-                    p1Label.Text = "Player 1: " + board.P1Score;
-                }
-                else
-                {
-                    board.P2Score += points;
-                    p2Label.Text = "Player 2: " + board.P2Score;
-                }
+                board.P1Score += score;
+                p1Label.Text = "Player 1: " + board.P1Score;
                 board.IsPlayerTurn = !board.IsPlayerTurn;
             }
             List<int> list = board.getAllEmptyCellsIndexes(board.BoardTable);
+            MessageBox.Show(list.Count.ToString());
             if (list.Count() == 0) MessageBox.Show("Player " + board.CheckWinner() + " wins!");
+            else
+            {
+                int btnNumber = board.BestMove();
+                int score = board.CalculatePoints(btnNumber);
+                board.BoardTable[btnNumber] = 1;
+                board.IsPlayerTurn = !board.IsPlayerTurn;
+                board.P2Score += score;
+                p2Label.Text = "Player 2: " + board.P2Score;
+                Button obj = buttons.Find(x => x.Name.Equals("button" + btnNumber));
+                obj.BackColor = Color.Black;
+                obj.Enabled = false;
+            }
         }
 
         private void BtnCreateNewGame(object sender, EventArgs e)
@@ -71,5 +76,7 @@ namespace Three_Six_Nine
             board = new Board();
             
         }
+
+
     }
 }

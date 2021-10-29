@@ -219,6 +219,7 @@ namespace Three_Six_Nine
             this.button80.Name = "button80";
             this.button80.Size = new System.Drawing.Size(50, 50);
             this.button80.TabIndex = 78;
+            this.button80.TabStop = false;
             this.button80.UseVisualStyleBackColor = true;
             this.button80.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -231,6 +232,7 @@ namespace Three_Six_Nine
             this.button79.Name = "button79";
             this.button79.Size = new System.Drawing.Size(50, 50);
             this.button79.TabIndex = 77;
+            this.button79.TabStop = false;
             this.button79.UseVisualStyleBackColor = true;
             this.button79.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -243,6 +245,7 @@ namespace Three_Six_Nine
             this.button78.Name = "button78";
             this.button78.Size = new System.Drawing.Size(50, 50);
             this.button78.TabIndex = 76;
+            this.button78.TabStop = false;
             this.button78.UseVisualStyleBackColor = true;
             this.button78.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -255,6 +258,7 @@ namespace Three_Six_Nine
             this.button77.Name = "button77";
             this.button77.Size = new System.Drawing.Size(50, 50);
             this.button77.TabIndex = 75;
+            this.button77.TabStop = false;
             this.button77.UseVisualStyleBackColor = true;
             this.button77.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -267,6 +271,7 @@ namespace Three_Six_Nine
             this.button76.Name = "button76";
             this.button76.Size = new System.Drawing.Size(50, 50);
             this.button76.TabIndex = 74;
+            this.button76.TabStop = false;
             this.button76.UseVisualStyleBackColor = true;
             this.button76.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -279,6 +284,7 @@ namespace Three_Six_Nine
             this.button75.Name = "button75";
             this.button75.Size = new System.Drawing.Size(50, 50);
             this.button75.TabIndex = 73;
+            this.button75.TabStop = false;
             this.button75.UseVisualStyleBackColor = true;
             this.button75.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -291,6 +297,7 @@ namespace Three_Six_Nine
             this.button74.Name = "button74";
             this.button74.Size = new System.Drawing.Size(50, 50);
             this.button74.TabIndex = 72;
+            this.button74.TabStop = false;
             this.button74.UseVisualStyleBackColor = true;
             this.button74.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -303,6 +310,7 @@ namespace Three_Six_Nine
             this.button73.Name = "button73";
             this.button73.Size = new System.Drawing.Size(50, 50);
             this.button73.TabIndex = 71;
+            this.button73.TabStop = false;
             this.button73.UseVisualStyleBackColor = true;
             this.button73.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -315,6 +323,7 @@ namespace Three_Six_Nine
             this.button72.Name = "button72";
             this.button72.Size = new System.Drawing.Size(50, 50);
             this.button72.TabIndex = 70;
+            this.button72.TabStop = false;
             this.button72.UseVisualStyleBackColor = true;
             this.button72.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -327,6 +336,7 @@ namespace Three_Six_Nine
             this.button71.Name = "button71";
             this.button71.Size = new System.Drawing.Size(50, 50);
             this.button71.TabIndex = 69;
+            this.button71.TabStop = false;
             this.button71.UseVisualStyleBackColor = true;
             this.button71.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -339,6 +349,7 @@ namespace Three_Six_Nine
             this.button70.Name = "button70";
             this.button70.Size = new System.Drawing.Size(50, 50);
             this.button70.TabIndex = 68;
+            this.button70.TabStop = false;
             this.button70.UseVisualStyleBackColor = true;
             this.button70.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -351,6 +362,7 @@ namespace Three_Six_Nine
             this.button69.Name = "button69";
             this.button69.Size = new System.Drawing.Size(50, 50);
             this.button69.TabIndex = 67;
+            this.button69.TabStop = false;
             this.button69.UseVisualStyleBackColor = true;
             this.button69.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -363,6 +375,7 @@ namespace Three_Six_Nine
             this.button68.Name = "button68";
             this.button68.Size = new System.Drawing.Size(50, 50);
             this.button68.TabIndex = 66;
+            this.button68.TabStop = false;
             this.button68.UseVisualStyleBackColor = true;
             this.button68.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -375,6 +388,7 @@ namespace Three_Six_Nine
             this.button67.Name = "button67";
             this.button67.Size = new System.Drawing.Size(50, 50);
             this.button67.TabIndex = 65;
+            this.button67.TabStop = false;
             this.button67.UseVisualStyleBackColor = true;
             this.button67.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -387,6 +401,7 @@ namespace Three_Six_Nine
             this.button66.Name = "button66";
             this.button66.Size = new System.Drawing.Size(50, 50);
             this.button66.TabIndex = 64;
+            this.button66.TabStop = false;
             this.button66.UseVisualStyleBackColor = true;
             this.button66.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -399,6 +414,7 @@ namespace Three_Six_Nine
             this.button65.Name = "button65";
             this.button65.Size = new System.Drawing.Size(50, 50);
             this.button65.TabIndex = 63;
+            this.button65.TabStop = false;
             this.button65.UseVisualStyleBackColor = true;
             this.button65.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -411,6 +427,7 @@ namespace Three_Six_Nine
             this.button64.Name = "button64";
             this.button64.Size = new System.Drawing.Size(50, 50);
             this.button64.TabIndex = 62;
+            this.button64.TabStop = false;
             this.button64.UseVisualStyleBackColor = true;
             this.button64.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -423,6 +440,7 @@ namespace Three_Six_Nine
             this.button63.Name = "button63";
             this.button63.Size = new System.Drawing.Size(50, 50);
             this.button63.TabIndex = 61;
+            this.button63.TabStop = false;
             this.button63.UseVisualStyleBackColor = true;
             this.button63.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -435,6 +453,7 @@ namespace Three_Six_Nine
             this.button62.Name = "button62";
             this.button62.Size = new System.Drawing.Size(50, 50);
             this.button62.TabIndex = 60;
+            this.button62.TabStop = false;
             this.button62.UseVisualStyleBackColor = true;
             this.button62.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -447,6 +466,7 @@ namespace Three_Six_Nine
             this.button61.Name = "button61";
             this.button61.Size = new System.Drawing.Size(50, 50);
             this.button61.TabIndex = 59;
+            this.button61.TabStop = false;
             this.button61.UseVisualStyleBackColor = true;
             this.button61.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -459,6 +479,7 @@ namespace Three_Six_Nine
             this.button60.Name = "button60";
             this.button60.Size = new System.Drawing.Size(50, 50);
             this.button60.TabIndex = 59;
+            this.button60.TabStop = false;
             this.button60.UseVisualStyleBackColor = true;
             this.button60.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -471,6 +492,7 @@ namespace Three_Six_Nine
             this.button59.Name = "button59";
             this.button59.Size = new System.Drawing.Size(50, 50);
             this.button59.TabIndex = 58;
+            this.button59.TabStop = false;
             this.button59.UseVisualStyleBackColor = true;
             this.button59.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -483,6 +505,7 @@ namespace Three_Six_Nine
             this.button58.Name = "button58";
             this.button58.Size = new System.Drawing.Size(50, 50);
             this.button58.TabIndex = 57;
+            this.button58.TabStop = false;
             this.button58.UseVisualStyleBackColor = true;
             this.button58.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -495,6 +518,7 @@ namespace Three_Six_Nine
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(50, 50);
             this.button57.TabIndex = 56;
+            this.button57.TabStop = false;
             this.button57.UseVisualStyleBackColor = true;
             this.button57.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -507,6 +531,7 @@ namespace Three_Six_Nine
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(50, 50);
             this.button56.TabIndex = 55;
+            this.button56.TabStop = false;
             this.button56.UseVisualStyleBackColor = true;
             this.button56.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -519,6 +544,7 @@ namespace Three_Six_Nine
             this.button55.Name = "button55";
             this.button55.Size = new System.Drawing.Size(50, 50);
             this.button55.TabIndex = 54;
+            this.button55.TabStop = false;
             this.button55.UseVisualStyleBackColor = true;
             this.button55.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -531,6 +557,7 @@ namespace Three_Six_Nine
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(50, 50);
             this.button54.TabIndex = 53;
+            this.button54.TabStop = false;
             this.button54.UseVisualStyleBackColor = true;
             this.button54.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -543,6 +570,7 @@ namespace Three_Six_Nine
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(50, 50);
             this.button53.TabIndex = 52;
+            this.button53.TabStop = false;
             this.button53.UseVisualStyleBackColor = true;
             this.button53.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -555,6 +583,7 @@ namespace Three_Six_Nine
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(50, 50);
             this.button52.TabIndex = 51;
+            this.button52.TabStop = false;
             this.button52.UseVisualStyleBackColor = true;
             this.button52.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -567,6 +596,7 @@ namespace Three_Six_Nine
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(50, 50);
             this.button51.TabIndex = 50;
+            this.button51.TabStop = false;
             this.button51.UseVisualStyleBackColor = true;
             this.button51.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -579,6 +609,7 @@ namespace Three_Six_Nine
             this.button50.Name = "button50";
             this.button50.Size = new System.Drawing.Size(50, 50);
             this.button50.TabIndex = 49;
+            this.button50.TabStop = false;
             this.button50.UseVisualStyleBackColor = true;
             this.button50.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -591,6 +622,7 @@ namespace Three_Six_Nine
             this.button49.Name = "button49";
             this.button49.Size = new System.Drawing.Size(50, 50);
             this.button49.TabIndex = 48;
+            this.button49.TabStop = false;
             this.button49.UseVisualStyleBackColor = true;
             this.button49.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -603,6 +635,7 @@ namespace Three_Six_Nine
             this.button48.Name = "button48";
             this.button48.Size = new System.Drawing.Size(50, 50);
             this.button48.TabIndex = 47;
+            this.button48.TabStop = false;
             this.button48.UseVisualStyleBackColor = true;
             this.button48.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -615,6 +648,7 @@ namespace Three_Six_Nine
             this.button47.Name = "button47";
             this.button47.Size = new System.Drawing.Size(50, 50);
             this.button47.TabIndex = 46;
+            this.button47.TabStop = false;
             this.button47.UseVisualStyleBackColor = true;
             this.button47.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -627,6 +661,7 @@ namespace Three_Six_Nine
             this.button46.Name = "button46";
             this.button46.Size = new System.Drawing.Size(50, 50);
             this.button46.TabIndex = 45;
+            this.button46.TabStop = false;
             this.button46.UseVisualStyleBackColor = true;
             this.button46.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -639,6 +674,7 @@ namespace Three_Six_Nine
             this.button45.Name = "button45";
             this.button45.Size = new System.Drawing.Size(50, 50);
             this.button45.TabIndex = 44;
+            this.button45.TabStop = false;
             this.button45.UseVisualStyleBackColor = true;
             this.button45.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -651,6 +687,7 @@ namespace Three_Six_Nine
             this.button44.Name = "button44";
             this.button44.Size = new System.Drawing.Size(50, 50);
             this.button44.TabIndex = 43;
+            this.button44.TabStop = false;
             this.button44.UseVisualStyleBackColor = true;
             this.button44.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -663,6 +700,7 @@ namespace Three_Six_Nine
             this.button43.Name = "button43";
             this.button43.Size = new System.Drawing.Size(50, 50);
             this.button43.TabIndex = 42;
+            this.button43.TabStop = false;
             this.button43.UseVisualStyleBackColor = true;
             this.button43.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -675,6 +713,7 @@ namespace Three_Six_Nine
             this.button42.Name = "button42";
             this.button42.Size = new System.Drawing.Size(50, 50);
             this.button42.TabIndex = 41;
+            this.button42.TabStop = false;
             this.button42.UseVisualStyleBackColor = true;
             this.button42.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -687,6 +726,7 @@ namespace Three_Six_Nine
             this.button41.Name = "button41";
             this.button41.Size = new System.Drawing.Size(50, 50);
             this.button41.TabIndex = 40;
+            this.button41.TabStop = false;
             this.button41.UseVisualStyleBackColor = true;
             this.button41.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -699,6 +739,7 @@ namespace Three_Six_Nine
             this.button40.Name = "button40";
             this.button40.Size = new System.Drawing.Size(50, 50);
             this.button40.TabIndex = 39;
+            this.button40.TabStop = false;
             this.button40.UseVisualStyleBackColor = true;
             this.button40.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -711,6 +752,7 @@ namespace Three_Six_Nine
             this.button39.Name = "button39";
             this.button39.Size = new System.Drawing.Size(50, 50);
             this.button39.TabIndex = 38;
+            this.button39.TabStop = false;
             this.button39.UseVisualStyleBackColor = true;
             this.button39.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -723,6 +765,7 @@ namespace Three_Six_Nine
             this.button38.Name = "button38";
             this.button38.Size = new System.Drawing.Size(50, 50);
             this.button38.TabIndex = 37;
+            this.button38.TabStop = false;
             this.button38.UseVisualStyleBackColor = true;
             this.button38.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -735,6 +778,7 @@ namespace Three_Six_Nine
             this.button37.Name = "button37";
             this.button37.Size = new System.Drawing.Size(50, 50);
             this.button37.TabIndex = 36;
+            this.button37.TabStop = false;
             this.button37.UseVisualStyleBackColor = true;
             this.button37.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -747,6 +791,7 @@ namespace Three_Six_Nine
             this.button36.Name = "button36";
             this.button36.Size = new System.Drawing.Size(50, 50);
             this.button36.TabIndex = 35;
+            this.button36.TabStop = false;
             this.button36.UseVisualStyleBackColor = true;
             this.button36.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -759,6 +804,7 @@ namespace Three_Six_Nine
             this.button35.Name = "button35";
             this.button35.Size = new System.Drawing.Size(50, 50);
             this.button35.TabIndex = 34;
+            this.button35.TabStop = false;
             this.button35.UseVisualStyleBackColor = true;
             this.button35.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -771,6 +817,7 @@ namespace Three_Six_Nine
             this.button34.Name = "button34";
             this.button34.Size = new System.Drawing.Size(50, 50);
             this.button34.TabIndex = 33;
+            this.button34.TabStop = false;
             this.button34.UseVisualStyleBackColor = true;
             this.button34.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -783,6 +830,7 @@ namespace Three_Six_Nine
             this.button33.Name = "button33";
             this.button33.Size = new System.Drawing.Size(50, 50);
             this.button33.TabIndex = 32;
+            this.button33.TabStop = false;
             this.button33.UseVisualStyleBackColor = true;
             this.button33.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -795,6 +843,7 @@ namespace Three_Six_Nine
             this.button32.Name = "button32";
             this.button32.Size = new System.Drawing.Size(50, 50);
             this.button32.TabIndex = 32;
+            this.button32.TabStop = false;
             this.button32.UseVisualStyleBackColor = true;
             this.button32.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -807,6 +856,7 @@ namespace Three_Six_Nine
             this.button31.Name = "button31";
             this.button31.Size = new System.Drawing.Size(50, 50);
             this.button31.TabIndex = 31;
+            this.button31.TabStop = false;
             this.button31.UseVisualStyleBackColor = true;
             this.button31.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -819,6 +869,7 @@ namespace Three_Six_Nine
             this.button30.Name = "button30";
             this.button30.Size = new System.Drawing.Size(50, 50);
             this.button30.TabIndex = 30;
+            this.button30.TabStop = false;
             this.button30.UseVisualStyleBackColor = true;
             this.button30.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -831,6 +882,7 @@ namespace Three_Six_Nine
             this.button29.Name = "button29";
             this.button29.Size = new System.Drawing.Size(50, 50);
             this.button29.TabIndex = 29;
+            this.button29.TabStop = false;
             this.button29.UseVisualStyleBackColor = true;
             this.button29.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -843,6 +895,7 @@ namespace Three_Six_Nine
             this.button28.Name = "button28";
             this.button28.Size = new System.Drawing.Size(50, 50);
             this.button28.TabIndex = 28;
+            this.button28.TabStop = false;
             this.button28.UseVisualStyleBackColor = true;
             this.button28.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -855,6 +908,7 @@ namespace Three_Six_Nine
             this.button27.Name = "button27";
             this.button27.Size = new System.Drawing.Size(50, 50);
             this.button27.TabIndex = 27;
+            this.button27.TabStop = false;
             this.button27.UseVisualStyleBackColor = true;
             this.button27.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -867,6 +921,7 @@ namespace Three_Six_Nine
             this.button26.Name = "button26";
             this.button26.Size = new System.Drawing.Size(50, 50);
             this.button26.TabIndex = 26;
+            this.button26.TabStop = false;
             this.button26.UseVisualStyleBackColor = true;
             this.button26.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -879,6 +934,7 @@ namespace Three_Six_Nine
             this.button25.Name = "button25";
             this.button25.Size = new System.Drawing.Size(50, 50);
             this.button25.TabIndex = 25;
+            this.button25.TabStop = false;
             this.button25.UseVisualStyleBackColor = true;
             this.button25.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -891,6 +947,7 @@ namespace Three_Six_Nine
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(50, 50);
             this.button24.TabIndex = 24;
+            this.button24.TabStop = false;
             this.button24.UseVisualStyleBackColor = true;
             this.button24.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -903,6 +960,7 @@ namespace Three_Six_Nine
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(50, 50);
             this.button23.TabIndex = 23;
+            this.button23.TabStop = false;
             this.button23.UseVisualStyleBackColor = true;
             this.button23.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -915,6 +973,7 @@ namespace Three_Six_Nine
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(50, 50);
             this.button22.TabIndex = 22;
+            this.button22.TabStop = false;
             this.button22.UseVisualStyleBackColor = true;
             this.button22.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -927,6 +986,7 @@ namespace Three_Six_Nine
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(50, 50);
             this.button21.TabIndex = 21;
+            this.button21.TabStop = false;
             this.button21.UseVisualStyleBackColor = true;
             this.button21.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -939,6 +999,7 @@ namespace Three_Six_Nine
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(50, 50);
             this.button20.TabIndex = 20;
+            this.button20.TabStop = false;
             this.button20.UseVisualStyleBackColor = true;
             this.button20.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -951,6 +1012,7 @@ namespace Three_Six_Nine
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(50, 50);
             this.button19.TabIndex = 19;
+            this.button19.TabStop = false;
             this.button19.UseVisualStyleBackColor = true;
             this.button19.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -963,6 +1025,7 @@ namespace Three_Six_Nine
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(50, 50);
             this.button18.TabIndex = 18;
+            this.button18.TabStop = false;
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -975,6 +1038,7 @@ namespace Three_Six_Nine
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(50, 50);
             this.button17.TabIndex = 17;
+            this.button17.TabStop = false;
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -987,6 +1051,7 @@ namespace Three_Six_Nine
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(50, 50);
             this.button16.TabIndex = 16;
+            this.button16.TabStop = false;
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -999,6 +1064,7 @@ namespace Three_Six_Nine
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(50, 50);
             this.button15.TabIndex = 15;
+            this.button15.TabStop = false;
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1011,6 +1077,7 @@ namespace Three_Six_Nine
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(50, 50);
             this.button14.TabIndex = 14;
+            this.button14.TabStop = false;
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1023,6 +1090,7 @@ namespace Three_Six_Nine
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(50, 50);
             this.button13.TabIndex = 13;
+            this.button13.TabStop = false;
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1035,6 +1103,7 @@ namespace Three_Six_Nine
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(50, 50);
             this.button12.TabIndex = 12;
+            this.button12.TabStop = false;
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1047,6 +1116,7 @@ namespace Three_Six_Nine
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 50);
             this.button11.TabIndex = 11;
+            this.button11.TabStop = false;
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1059,6 +1129,7 @@ namespace Three_Six_Nine
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
             this.button10.TabIndex = 10;
+            this.button10.TabStop = false;
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1071,6 +1142,7 @@ namespace Three_Six_Nine
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 50);
             this.button9.TabIndex = 9;
+            this.button9.TabStop = false;
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1083,6 +1155,7 @@ namespace Three_Six_Nine
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(50, 50);
             this.button8.TabIndex = 8;
+            this.button8.TabStop = false;
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1095,6 +1168,7 @@ namespace Three_Six_Nine
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
             this.button7.TabIndex = 7;
+            this.button7.TabStop = false;
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1107,6 +1181,7 @@ namespace Three_Six_Nine
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
             this.button6.TabIndex = 6;
+            this.button6.TabStop = false;
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1119,6 +1194,7 @@ namespace Three_Six_Nine
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
             this.button5.TabIndex = 5;
+            this.button5.TabStop = false;
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1131,6 +1207,7 @@ namespace Three_Six_Nine
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
             this.button4.TabIndex = 4;
+            this.button4.TabStop = false;
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1143,6 +1220,7 @@ namespace Three_Six_Nine
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
             this.button3.TabIndex = 3;
+            this.button3.TabStop = false;
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1155,6 +1233,7 @@ namespace Three_Six_Nine
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
             this.button2.TabIndex = 2;
+            this.button2.TabStop = false;
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1167,6 +1246,7 @@ namespace Three_Six_Nine
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
             this.button1.TabIndex = 1;
+            this.button1.TabStop = false;
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.onBtnClick);
             // 
@@ -1179,6 +1259,7 @@ namespace Three_Six_Nine
             this.button0.Name = "button0";
             this.button0.Size = new System.Drawing.Size(50, 50);
             this.button0.TabIndex = 0;
+            this.button0.TabStop = false;
             this.button0.UseVisualStyleBackColor = true;
             this.button0.Click += new System.EventHandler(this.onBtnClick);
             // 
