@@ -3,22 +3,23 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Three_Six_Nine
 {
     class Board
     {
         private int[] boardTable;
-        private bool isPlayerTurn;
+        private bool isMaximizing;
         private int p1Score;
         private int p2Score;
         public int[] BoardTable {
             get { return boardTable; }
             set { boardTable = value; }
         }
-        public bool IsPlayerTurn {
-            get { return isPlayerTurn; }
-            set { isPlayerTurn = value; }
+        public bool IsMaximizing {
+            get { return isMaximizing; }
+            set { isMaximizing = value; }
         }
         public int P1Score {
             get { return p1Score; }
@@ -32,7 +33,7 @@ namespace Three_Six_Nine
         public Board()
         {
             BoardTable = new int[81];
-            IsPlayerTurn = true;
+            IsMaximizing = false;
             P1Score = 0;
             P2Score = 0;
         }
@@ -52,7 +53,7 @@ namespace Three_Six_Nine
             return P1Score > P2Score ? 1 : 2;
         }
 
-        public int CalculatePoints(int index)
+        public int CalculatePoints(int index, int[] gameState)
         {
             int amount = 0;
             int score = 0;
@@ -61,7 +62,7 @@ namespace Three_Six_Nine
             int colIndex = index % offset;
             for (int i = rowIndex; i < rowIndex+offset; i++)
             {
-                if (boardTable[i] == 1) amount++;
+                if (gameState[i] == 1) amount++;
             }
 
             if (amount == 2) score++;
@@ -69,9 +70,9 @@ namespace Three_Six_Nine
             if (amount == 8) score+=3;
             amount = 0;
 
-            for (int i = colIndex; i < boardTable.Length; i+=9)
+            for (int i = colIndex; i < gameState.Length; i+=9)
             {
-                if (boardTable[i] == 1) amount++;
+                if (gameState[i] == 1) amount++;
             }
 
             if (amount == 2) score++;
@@ -81,63 +82,68 @@ namespace Three_Six_Nine
         }
         public int EvaluateMove(int p1Score, int p2Score)
         {
-            return p1Score - p2Score;
+            return p2Score - p1Score;
         }
 
         public int BestMove()
         {
-            double bestScore = double.NegativeInfinity;
+            int bestScore =-999;
             int move = -1;
             List<int> indexes = getAllEmptyCellsIndexes(BoardTable);
             foreach(int index in indexes)
             {
                 BoardTable[index] = 1;
-                int score = Minimax(BoardTable, 2, false, P1Score, P2Score);
+                int score = Minimax(BoardTable, 1, false, P1Score, P2Score);
                 BoardTable[index] = 0;
+                //MessageBox.Show(score.ToString());
+                Console.Write("["+index+"]: "+score + " ");
                 if(score > bestScore)
                 {
                     bestScore = score;
                     move = index;
                 }
             }
+            Console.WriteLine();
+            Console.WriteLine("best: " + bestScore + ", index: " + move);
+            Console.WriteLine("p1:" + P1Score + ", AI: " + P2Score);
             return move;
         }
 
-        public int Minimax(int[] gameState, int depth, bool isPlayerTurn, int p1Score, int p2Score)
+        public int Minimax(int[] gameState, int depth, bool isMaximizing, int p1Score, int p2Score)
         {
             List<int> indexes = getAllEmptyCellsIndexes(gameState);
             if (indexes.Count == 0 || depth == 0)
             {
-                return EvaluateMove(P1Score, P2Score);
+                return EvaluateMove(p1Score, p2Score);
             }
-
-            if (!isPlayerTurn)
+            if (isMaximizing)
             {
                 //AI move
-                double bestScore = double.NegativeInfinity;
+                int bestScore = -999;
                 foreach(int index in indexes)
                 {
-                    p2Score += CalculatePoints(index);
+                    p2Score += CalculatePoints(index, gameState);
                     gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, true, p1Score, p2Score);
+                    int score = Minimax(gameState, depth - 1, false, p1Score, p2Score);
                     gameState[index] = 0;
                     bestScore = Math.Max(score, bestScore);
                 }
-                return (int)bestScore;
+                //Console.Write(bestScore+" ");
+                return bestScore;
             }
             else
             {
                 //player simulated move
-                double bestScore = double.PositiveInfinity;
+                int bestScore = 999;
                 foreach (int index in indexes)
                 {
-                    p1Score += CalculatePoints(index);
+                    p1Score += CalculatePoints(index, gameState);
                     gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, false, p1Score, p2Score);
+                    int score = Minimax(gameState, depth - 1, true, p1Score, p2Score);
                     gameState[index] = 0;
                     bestScore = Math.Min(score, bestScore);
                 }
-                return (int)bestScore;
+                return bestScore;
             }
         }
     }

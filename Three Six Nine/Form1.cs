@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Runtime.InteropServices;
 namespace Three_Six_Nine
 {
     public partial class Form1 : Form
@@ -32,6 +32,7 @@ namespace Three_Six_Nine
 
         }
 
+
         private void onBtnClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -47,21 +48,21 @@ namespace Three_Six_Nine
             }
             else
             {
-                int score = board.CalculatePoints(index);
+                int score = board.CalculatePoints(index,board.BoardTable);
                 board.BoardTable[index] = 1;
                 board.P1Score += score;
                 p1Label.Text = "Player 1: " + board.P1Score;
-                board.IsPlayerTurn = !board.IsPlayerTurn;
+                board.IsMaximizing = !board.IsMaximizing;
             }
             List<int> list = board.getAllEmptyCellsIndexes(board.BoardTable);
-            MessageBox.Show(list.Count.ToString());
+            
             if (list.Count() == 0) MessageBox.Show("Player " + board.CheckWinner() + " wins!");
             else
             {
                 int btnNumber = board.BestMove();
-                int score = board.CalculatePoints(btnNumber);
+                int score = board.CalculatePoints(btnNumber,board.BoardTable);
                 board.BoardTable[btnNumber] = 1;
-                board.IsPlayerTurn = !board.IsPlayerTurn;
+                board.IsMaximizing = !board.IsMaximizing;
                 board.P2Score += score;
                 p2Label.Text = "Player 2: " + board.P2Score;
                 Button obj = buttons.Find(x => x.Name.Equals("button" + btnNumber));
