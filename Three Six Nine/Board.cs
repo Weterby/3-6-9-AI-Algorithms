@@ -93,7 +93,7 @@ namespace Three_Six_Nine
             foreach(int index in indexes)
             {
                 BoardTable[index] = 1;
-                int score = Minimax(BoardTable, 1, false, P1Score, P2Score);
+                int score = Minimax(BoardTable, 3, false, P1Score, P2Score);
                 BoardTable[index] = 0;
                 //MessageBox.Show(score.ToString());
                 Console.Write("["+index+"]: "+score + " ");
@@ -122,13 +122,12 @@ namespace Three_Six_Nine
                 int bestScore = -999;
                 foreach(int index in indexes)
                 {
-                    p2Score += CalculatePoints(index, gameState);
+                    int tempPoints = CalculatePoints(index, gameState);
                     gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, false, p1Score, p2Score);
+                    int score = Minimax(gameState, depth - 1, false, p1Score, p2Score+tempPoints);
                     gameState[index] = 0;
                     bestScore = Math.Max(score, bestScore);
                 }
-                //Console.Write(bestScore+" ");
                 return bestScore;
             }
             else
@@ -137,12 +136,14 @@ namespace Three_Six_Nine
                 int bestScore = 999;
                 foreach (int index in indexes)
                 {
-                    p1Score += CalculatePoints(index, gameState);
+                    int tempPoints = CalculatePoints(index, gameState);
                     gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, true, p1Score, p2Score);
+                    int score = Minimax(gameState, depth - 1, true, p1Score+ tempPoints, p2Score);
+                 //   Console.Write("{" + score + "}");
                     gameState[index] = 0;
                     bestScore = Math.Min(score, bestScore);
                 }
+               // Console.Write("|" + bestScore + "|");
                 return bestScore;
             }
         }
