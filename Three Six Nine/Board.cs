@@ -9,10 +9,17 @@ namespace Three_Six_Nine
 {
     class Board
     {
+        #region Private Fields
+
         private int[] boardTable;
         private bool isMaximizing;
         private int p1Score;
         private int p2Score;
+
+        #endregion
+
+        #region Public Properties
+
         public int[] BoardTable {
             get { return boardTable; }
             set { boardTable = value; }
@@ -30,6 +37,9 @@ namespace Three_Six_Nine
             set { p2Score = value; }
         }
 
+        #endregion
+
+        #region Public methods
         public Board()
         {
             BoardTable = new int[81];
@@ -53,7 +63,7 @@ namespace Three_Six_Nine
             return P1Score > P2Score ? 1 : 2;
         }
 
-        public int CalculatePoints(int index, int[] gameState)
+        public int CalculatePoints(int[] gameState, int index)
         {
             int amount = 0;
             int score = 0;
@@ -96,19 +106,22 @@ namespace Three_Six_Nine
                 int score = Minimax(BoardTable, 3, false, P1Score, P2Score);
                 BoardTable[index] = 0;
                 //MessageBox.Show(score.ToString());
-                Console.Write("["+index+"]: "+score + " ");
+                //Console.Write("["+index+"]: "+score + " ");
                 if(score > bestScore)
                 {
                     bestScore = score;
                     move = index;
                 }
             }
-            Console.WriteLine();
-            Console.WriteLine("best: " + bestScore + ", index: " + move);
-            Console.WriteLine("p1:" + P1Score + ", AI: " + P2Score);
+            //Console.WriteLine();
+            //Console.WriteLine("best: " + bestScore + ", index: " + move);
+            //Console.WriteLine("p1:" + P1Score + ", AI: " + P2Score);
             return move;
         }
 
+        #endregion
+
+        #region Private methods
         public int Minimax(int[] gameState, int depth, bool isMaximizing, int p1Score, int p2Score)
         {
             List<int> indexes = getAllEmptyCellsIndexes(gameState);
@@ -122,7 +135,7 @@ namespace Three_Six_Nine
                 int bestScore = -999;
                 foreach(int index in indexes)
                 {
-                    int tempPoints = CalculatePoints(index, gameState);
+                    int tempPoints = CalculatePoints(gameState, index);
                     gameState[index] = 1;
                     int score = Minimax(gameState, depth - 1, false, p1Score, p2Score+tempPoints);
                     gameState[index] = 0;
@@ -136,10 +149,10 @@ namespace Three_Six_Nine
                 int bestScore = 999;
                 foreach (int index in indexes)
                 {
-                    int tempPoints = CalculatePoints(index, gameState);
+                    int tempPoints = CalculatePoints(gameState, index);
                     gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, true, p1Score+ tempPoints, p2Score);
-                 //   Console.Write("{" + score + "}");
+                    int score = Minimax(gameState, depth - 1, true, p1Score+tempPoints, p2Score);
+                    //Console.Write("{" + score + "}");
                     gameState[index] = 0;
                     bestScore = Math.Min(score, bestScore);
                 }
@@ -147,5 +160,6 @@ namespace Three_Six_Nine
                 return bestScore;
             }
         }
+        #endregion
     }
 }

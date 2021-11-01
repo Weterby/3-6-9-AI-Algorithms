@@ -1,19 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Runtime.InteropServices;
 namespace Three_Six_Nine
 {
     public partial class Form1 : Form
     {
+        #region Private Fields
+
         private Board board;
-        List<Button> buttons = new List<Button>();
+        private List<Button> buttons = new List<Button>();
+
+        #endregion
+
+        #region Public Methods
         public Form1()
         {
             InitializeComponent();
@@ -26,13 +27,9 @@ namespace Three_Six_Nine
                 }
             }
         }
+        #endregion
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
+        #region Private Methods
         private void onBtnClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -48,7 +45,7 @@ namespace Three_Six_Nine
             }
             else
             {
-                int score = board.CalculatePoints(index,board.BoardTable);
+                int score = board.CalculatePoints(board.BoardTable, index);
                 board.BoardTable[index] = 1;
                 board.P1Score += score;
                 p1Label.Text = "Player 1: " + board.P1Score;
@@ -60,7 +57,7 @@ namespace Three_Six_Nine
             else
             {
                 int btnNumber = board.BestMove();
-                int score = board.CalculatePoints(btnNumber,board.BoardTable);
+                int score = board.CalculatePoints(board.BoardTable, btnNumber);
                 board.BoardTable[btnNumber] = 1;
                 board.IsMaximizing = !board.IsMaximizing;
                 board.P2Score += score;
@@ -77,7 +74,10 @@ namespace Three_Six_Nine
             board = new Board();
             
         }
+        private void Form1_Load(object sender, EventArgs e)
+        {
 
-
+        }
+        #endregion
     }
 }
