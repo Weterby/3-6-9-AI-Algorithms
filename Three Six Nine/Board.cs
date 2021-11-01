@@ -47,7 +47,7 @@ namespace Three_Six_Nine
             P2Score = 0;
         }
 
-        public List<int> getAllEmptyCellsIndexes(int[] gameState)
+        public List<int> GetAllEmptyCellsIndexes(int[] gameState)
         {
             List<int> indexes = new List<int>();
             for(int i = 0; i < gameState.Length; i++)
@@ -56,7 +56,11 @@ namespace Three_Six_Nine
             }
             return indexes;
         }
-
+        public int RemainingMoves()
+        {
+            List<int> list = GetAllEmptyCellsIndexes(BoardTable);
+            return list.Count;
+        }
         public int CheckWinner()
         {
             return P1Score > P2Score ? 1 : 2;
@@ -98,11 +102,11 @@ namespace Three_Six_Nine
         {
             int bestScore =-999;
             int move = -1;
-            List<int> indexes = getAllEmptyCellsIndexes(BoardTable);
+            List<int> indexes = GetAllEmptyCellsIndexes(BoardTable);
             foreach(int index in indexes)
             {
                 BoardTable[index] = 1;
-                int score = Minimax(BoardTable, 1, false, P1Score, P2Score);
+                int score = Minimax(BoardTable, 3, false, P1Score, P2Score);
                 BoardTable[index] = 0;
                 //Console.Write("["+index+"]: "+score + " ");
                 if(score > bestScore)
@@ -118,7 +122,7 @@ namespace Three_Six_Nine
         }
         public int RandomPick()
         {
-            List<int> indexes = getAllEmptyCellsIndexes(BoardTable);
+            List<int> indexes = GetAllEmptyCellsIndexes(BoardTable);
             Random rand = new Random();
             int move = indexes[rand.Next(indexes.Count)];
             return move;
@@ -128,7 +132,7 @@ namespace Three_Six_Nine
         #region Private Methods
         private int Minimax(int[] gameState, int depth, bool isMaximizing, int p1Score, int p2Score)
         {
-            List<int> indexes = getAllEmptyCellsIndexes(gameState);
+            List<int> indexes = GetAllEmptyCellsIndexes(gameState);
             if (indexes.Count == 0 || depth == 0)
             {
                 return EvaluateMove(p1Score, p2Score);
