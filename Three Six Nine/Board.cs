@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
 namespace Three_Six_Nine
 {
     class Board
@@ -103,9 +102,8 @@ namespace Three_Six_Nine
             foreach(int index in indexes)
             {
                 BoardTable[index] = 1;
-                int score = Minimax(BoardTable, 3, false, P1Score, P2Score);
+                int score = Minimax(BoardTable, 1, false, P1Score, P2Score);
                 BoardTable[index] = 0;
-                //MessageBox.Show(score.ToString());
                 //Console.Write("["+index+"]: "+score + " ");
                 if(score > bestScore)
                 {
@@ -118,11 +116,17 @@ namespace Three_Six_Nine
             //Console.WriteLine("p1:" + P1Score + ", AI: " + P2Score);
             return move;
         }
-
+        public int RandomPick()
+        {
+            List<int> indexes = getAllEmptyCellsIndexes(BoardTable);
+            Random rand = new Random();
+            int move = indexes[rand.Next(indexes.Count)];
+            return move;
+        }
         #endregion
 
-        #region Private methods
-        public int Minimax(int[] gameState, int depth, bool isMaximizing, int p1Score, int p2Score)
+        #region Private Methods
+        private int Minimax(int[] gameState, int depth, bool isMaximizing, int p1Score, int p2Score)
         {
             List<int> indexes = getAllEmptyCellsIndexes(gameState);
             if (indexes.Count == 0 || depth == 0)
@@ -156,7 +160,7 @@ namespace Three_Six_Nine
                     gameState[index] = 0;
                     bestScore = Math.Min(score, bestScore);
                 }
-               // Console.Write("|" + bestScore + "|");
+                // Console.Write("|" + bestScore + "|");
                 return bestScore;
             }
         }
