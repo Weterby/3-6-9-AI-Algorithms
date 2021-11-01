@@ -11,7 +11,8 @@ namespace Three_Six_Nine
 
         private Board board;
         private List<Button> buttons = new List<Button>();
-
+        private string gameMode;
+        private bool gameStarted;
         #endregion
 
         #region Public Methods
@@ -70,14 +71,34 @@ namespace Three_Six_Nine
 
         private void BtnCreateNewGame(object sender, EventArgs e)
         {
-            foreach (Button btn in buttons) btn.Enabled=true;
             board = new Board();
+
+            foreach (Button btn in buttons)
+            {
+                if(gameMode.Equals("AI vs Player") || gameMode.Equals("Player vs Player"))
+                {
+                    btn.Enabled = true;
+                }
+                else btn.Enabled = false;
+                btn.BackColor = Color.LightGray;
+            }
             
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
+            comboBox1.Items.Add("AI vs AI");
+            comboBox1.Items.Add("AI vs Player");
+            comboBox1.Items.Add("AI vs Random");
+            comboBox1.Items.Add("Player vs Player");
+            comboBox1.Text = "AI vs Random";
+            
         }
         #endregion
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            gameMode = comboBox1.SelectedItem.ToString();
+        }
     }
 }

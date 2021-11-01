@@ -112,13 +112,12 @@ namespace Three_Six_Nine
             this.button1 = new System.Windows.Forms.Button();
             this.button0 = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.pictureBox81 = new System.Windows.Forms.PictureBox();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.newGameBtn = new System.Windows.Forms.Button();
             this.p2Label = new System.Windows.Forms.Label();
             this.p1Label = new System.Windows.Forms.Label();
             this.BoardBox.SuspendLayout();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).BeginInit();
             this.SuspendLayout();
             // 
             // BoardBox
@@ -1265,7 +1264,7 @@ namespace Three_Six_Nine
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.pictureBox81);
+            this.groupBox2.Controls.Add(this.comboBox1);
             this.groupBox2.Controls.Add(this.newGameBtn);
             this.groupBox2.Controls.Add(this.p2Label);
             this.groupBox2.Controls.Add(this.p1Label);
@@ -1275,14 +1274,15 @@ namespace Three_Six_Nine
             this.groupBox2.TabIndex = 3;
             this.groupBox2.TabStop = false;
             // 
-            // pictureBox81
+            // comboBox1
             // 
-            this.pictureBox81.Image = global::Three_Six_Nine.Properties.Resources.circle;
-            this.pictureBox81.Location = new System.Drawing.Point(74, 402);
-            this.pictureBox81.Name = "pictureBox81";
-            this.pictureBox81.Size = new System.Drawing.Size(50, 50);
-            this.pictureBox81.TabIndex = 3;
-            this.pictureBox81.TabStop = false;
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(42, 231);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(125, 21);
+            this.comboBox1.TabIndex = 4;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // newGameBtn
             // 
@@ -1326,7 +1326,6 @@ namespace Three_Six_Nine
             this.Load += new System.EventHandler(this.Form1_Load);
             this.BoardBox.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox81)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1337,7 +1336,6 @@ namespace Three_Six_Nine
         private System.Windows.Forms.Label p2Label;
         private System.Windows.Forms.Label p1Label;
         private System.Windows.Forms.Button newGameBtn;
-        private System.Windows.Forms.PictureBox pictureBox81;
         private System.Windows.Forms.Button button0;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
@@ -1419,6 +1417,7 @@ namespace Three_Six_Nine
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button5;
+        private System.Windows.Forms.ComboBox comboBox1;
     }
 }
 
