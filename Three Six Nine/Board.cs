@@ -41,10 +41,10 @@ namespace Three_Six_Nine
         #region Public methods
         public Board()
         {
-            BoardTable = new int[81];
-            IsMaximizing = false;
-            P1Score = 0;
-            P2Score = 0;
+            boardTable = new int[81];
+            isMaximizing = true;
+            p1Score = 0;
+            p2Score = 0;
         }
 
         public List<int> GetAllEmptyCellsIndexes(int[] gameState)
@@ -93,10 +93,39 @@ namespace Three_Six_Nine
             if (amount == 9) score += 3;
             return score;
         }
-        public int EvaluateMove(int[] gameState, bool isMaximizing, int index)
+        public int EvaluateMove(int[] gameState, int index)
         {
-            int value = CalculatePoints(gameState, index);
-            return isMaximizing ? value : -value;
+            int amount = 0;
+            int score = 0;
+            int offset = 9;
+            int rowIndex = (index / offset) * offset;
+            int colIndex = index % offset;
+            for (int i = rowIndex; i < rowIndex + offset; i++)
+            {
+                if (gameState[i] == 1) amount++;
+            }
+
+            if (amount == 2) score--;
+            if (amount == 3) score++;
+            if (amount == 5) score -= 2;
+            if (amount == 6) score += 2;
+            if (amount == 8) score -= 3;
+            if (amount == 9) score += 3;
+            amount = 0;
+
+            for (int i = colIndex; i < gameState.Length; i += 9)
+            {
+                if (gameState[i] == 1) amount++;
+            }
+
+            if (amount == 2) score--;
+            if (amount == 3) score++;
+            if (amount == 5) score -= 2;
+            if (amount == 6) score += 2;
+            if (amount == 8) score -= 3;
+            if (amount == 9) score += 3;
+            return score;
+
         }
 
         public int BestMove()
@@ -109,7 +138,7 @@ namespace Three_Six_Nine
                 BoardTable[index] = 1;
                 int score = Minimax(BoardTable, 1, false, index);
                 BoardTable[index] = 0;
-                Console.Write("["+index+"]: "+score + " ");
+                Console.Write("[" + index + "]: " + score + " ");
                 if (score > bestScore)
                 {
                     bestScore = score;
@@ -136,7 +165,7 @@ namespace Three_Six_Nine
             List<int> indexes = GetAllEmptyCellsIndexes(gameState);
             if (indexes.Count == 0 || depth == 0)
             {
-                return EvaluateMove(gameState, isMaximizing, lastIndex);
+                return EvaluateMove(gameState, lastIndex);
             }
             if (isMaximizing)
             {
