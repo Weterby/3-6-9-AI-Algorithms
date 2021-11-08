@@ -96,7 +96,8 @@ namespace Three_Six_Nine
         public int EvaluateMove(int[] gameState, bool isMaximizing, int index)
         {
             int amount = 0;
-            int score = 0;
+            int scoreV = 0;
+            int scoreH = 0;
             int offset = 9;
             int rowIndex = (index / offset) * offset;
             int colIndex = index % offset;
