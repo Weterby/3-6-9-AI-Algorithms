@@ -78,9 +78,9 @@ namespace Three_Six_Nine
                 if (gameState[i] == 1) amount++;
             }
 
-            if (amount == 2) score++;
-            if (amount == 5) score+=2;
-            if (amount == 8) score+=3;
+            if (amount == 3) score++;
+            if (amount == 6) score+=2;
+            if (amount == 9) score+=3;
             amount = 0;
 
             for (int i = colIndex; i < gameState.Length; i+=9)
@@ -88,14 +88,15 @@ namespace Three_Six_Nine
                 if (gameState[i] == 1) amount++;
             }
 
-            if (amount == 2) score++;
-            if (amount == 5) score += 2;
-            if (amount == 8) score += 3;
+            if (amount == 3) score++;
+            if (amount == 6) score += 2;
+            if (amount == 9) score += 3;
             return score;
         }
-        public int EvaluateMove(int p1Score, int p2Score)
+        public int EvaluateMove(int[] gameState, bool isMaximizing, int index)
         {
-            return p2Score - p1Score;
+            int value = CalculatePoints(gameState, index);
+            return isMaximizing ? value : -value;
         }
 
         public int BestMove()
@@ -106,18 +107,18 @@ namespace Three_Six_Nine
             foreach(int index in indexes)
             {
                 BoardTable[index] = 1;
-                int score = Minimax(BoardTable, 3, false, P1Score, P2Score);
+                int score = Minimax(BoardTable, 1, false, index);
                 BoardTable[index] = 0;
-                //Console.Write("["+index+"]: "+score + " ");
-                if(score > bestScore)
+                Console.Write("["+index+"]: "+score + " ");
+                if (score > bestScore)
                 {
                     bestScore = score;
                     move = index;
                 }
             }
-            //Console.WriteLine();
-            //Console.WriteLine("best: " + bestScore + ", index: " + move);
-            //Console.WriteLine("p1:" + P1Score + ", AI: " + P2Score);
+            Console.WriteLine();
+            Console.WriteLine("best: " + bestScore + ", index: " + move);
+            Console.WriteLine("p1:" + P1Score + ", AI: " + P2Score);
             return move;
         }
         public int RandomPick()
@@ -130,12 +131,12 @@ namespace Three_Six_Nine
         #endregion
 
         #region Private Methods
-        private int Minimax(int[] gameState, int depth, bool isMaximizing, int p1Score, int p2Score)
+        private int Minimax(int[] gameState, int depth, bool isMaximizing, int lastIndex)
         {
             List<int> indexes = GetAllEmptyCellsIndexes(gameState);
             if (indexes.Count == 0 || depth == 0)
             {
-                return EvaluateMove(p1Score, p2Score);
+                return EvaluateMove(gameState, isMaximizing, lastIndex);
             }
             if (isMaximizing)
             {
@@ -143,9 +144,8 @@ namespace Three_Six_Nine
                 int bestScore = -999;
                 foreach(int index in indexes)
                 {
-                    int tempPoints = CalculatePoints(gameState, index);
                     gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, false, p1Score, p2Score+tempPoints);
+                    int score = Minimax(gameState, depth - 1, false, index);
                     gameState[index] = 0;
                     bestScore = Math.Max(score, bestScore);
                 }
@@ -157,14 +157,11 @@ namespace Three_Six_Nine
                 int bestScore = 999;
                 foreach (int index in indexes)
                 {
-                    int tempPoints = CalculatePoints(gameState, index);
                     gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, true, p1Score+tempPoints, p2Score);
-                    //Console.Write("{" + score + "}");
+                    int score = Minimax(gameState, depth - 1, true, index);
                     gameState[index] = 0;
                     bestScore = Math.Min(score, bestScore);
                 }
-                // Console.Write("|" + bestScore + "|");
                 return bestScore;
             }
         }

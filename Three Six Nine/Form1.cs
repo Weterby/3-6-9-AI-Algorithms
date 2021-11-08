@@ -13,7 +13,7 @@ namespace Three_Six_Nine
         private List<Button> buttons = new List<Button>();
         private string gameMode;
         //private bool gameStarted;
-        private int playerMove = -1;
+        private bool isRandomPlaying = true;
         #endregion
 
         #region Public Methods
@@ -32,7 +32,7 @@ namespace Three_Six_Nine
         #endregion
 
         #region Private Methods
-       
+
         private void onBtnClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -40,23 +40,40 @@ namespace Three_Six_Nine
             btn.Enabled = false;
 
             int index = -1;
-            //get the button number 'ex. button45'
             string number = btn.Name.Substring(6);
             Int32.TryParse(number, out index);
-
             if (index < 0)
             {
                 MessageBox.Show("Blad w przetwarzaniu indeksu przycisku");
             }
             else
             {
-                playerMove = index;
-            }        
+                board.BoardTable[index] = 1;
+                int score = board.CalculatePoints(board.BoardTable, index);
+                board.P1Score += score;
+                p1Label.Text = "Player 1: " + board.P1Score;
+                board.IsMaximizing = !board.IsMaximizing;
+            }
+            List<int> list = board.GetAllEmptyCellsIndexes(board.BoardTable);
+
+            if (list.Count() == 0) MessageBox.Show("Player " + board.CheckWinner() + " wins!");
+            else
+            {
+                int btnNumber = board.BestMove();
+                board.BoardTable[btnNumber] = 1;
+                int score = board.CalculatePoints(board.BoardTable, btnNumber);
+                board.IsMaximizing = !board.IsMaximizing;
+                board.P2Score += score;
+                p2Label.Text = "Player 2: " + board.P2Score;
+                Button obj = buttons.Find(x => x.Name.Equals("button" + btnNumber));
+                obj.BackColor = Color.Black;
+                obj.Enabled = false;
+            }
         }
         private void BtnCreateNewGame(object sender, EventArgs e)
         {
             ClearBoard();
-            SimulateGame(100);
+            //SimulateGame(20);
         }
 
         private void ClearBoard()
@@ -107,22 +124,23 @@ namespace Three_Six_Nine
         private void NextMove()
         {
             int move = -1;
-            if (board.IsMaximizing)
+            if (!isRandomPlaying)
             {
                 move = board.BestMove();
+                board.BoardTable[move] = 1;
                 board.P2Score += board.CalculatePoints(board.BoardTable, move);
             }
             else
             {
                 move = board.RandomPick();
+                board.BoardTable[move] = 1;
                 board.P1Score += board.CalculatePoints(board.BoardTable, move);
             }
 
             if(move<0) MessageBox.Show("Blad w przetwarzaniu indeksu");
             else 
             {
-                board.IsMaximizing = !board.IsMaximizing;
-                board.BoardTable[move] = 1;
+                isRandomPlaying = !isRandomPlaying;
                 UpdateBoard(move);
             }
             
@@ -140,6 +158,7 @@ namespace Three_Six_Nine
         private void Form1_Load(object sender, EventArgs e)
         {
             comboBox1.Items.Add("AI vs Random");
+            comboBox1.Items.Add("AI vs Player");
             comboBox1.Text = "AI vs Random";       
         }
         #endregion
