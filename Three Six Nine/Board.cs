@@ -93,7 +93,7 @@ namespace Three_Six_Nine
             if (amount == 9) score += 3;
             return score;
         }
-        public int EvaluateMove(int[] gameState, int index)
+        public int EvaluateMove(int[] gameState, bool isMaximizing, int index)
         {
             int amount = 0;
             int score = 0;
@@ -105,12 +105,12 @@ namespace Three_Six_Nine
                 if (gameState[i] == 1) amount++;
             }
 
-            if (amount == 2) score--;
-            if (amount == 3) score++;
-            if (amount == 5) score -= 2;
-            if (amount == 6) score += 2;
-            if (amount == 8) score -= 3;
-            if (amount == 9) score += 3;
+            if (amount == 2) scoreH -= 5;
+            if (amount == 3) scoreH += 5;
+            if (amount == 5) scoreH -= 25;
+            if (amount == 6) scoreH += 25;
+            if (amount == 8) scoreH -= 125;
+            if (amount == 9) scoreH += 125;
             amount = 0;
 
             for (int i = colIndex; i < gameState.Length; i += 9)
@@ -118,14 +118,38 @@ namespace Three_Six_Nine
                 if (gameState[i] == 1) amount++;
             }
 
-            if (amount == 2) score--;
-            if (amount == 3) score++;
-            if (amount == 5) score -= 2;
-            if (amount == 6) score += 2;
-            if (amount == 8) score -= 3;
-            if (amount == 9) score += 3;
-            return score;
+            if (amount == 2) scoreV -= 5;
+            if (amount == 3) scoreV += 5;
+            if (amount == 5) scoreV -= 25;
+            if (amount == 6) scoreV += 25;
+            if (amount == 8) scoreV -= 125;
+            if (amount == 9) scoreV += 125;
 
+            int value = 0;
+            if (scoreH >= 0 && scoreV >= 0)
+            {
+                value = scoreH + scoreV;
+            }
+            else if (scoreH <= 0 && scoreV <= 0)
+            {
+                value = Math.Min(scoreH, scoreV);
+            }
+            else if (scoreH == -scoreV)
+            { 
+                value = 0;
+            }
+            else if(scoreH == 0 && scoreV == 0)
+            {
+                value = 0;
+            }
+            else
+            {
+                value = scoreH + scoreV;
+            }
+
+            if (isMaximizing) value = -value;
+
+            return value;
         }
 
         public int BestMove()
@@ -165,7 +189,7 @@ namespace Three_Six_Nine
             List<int> indexes = GetAllEmptyCellsIndexes(gameState);
             if (indexes.Count == 0 || depth == 0)
             {
-                return EvaluateMove(gameState, lastIndex);
+                return EvaluateMove(gameState,isMaximizing, lastIndex);
             }
             if (isMaximizing)
             {
