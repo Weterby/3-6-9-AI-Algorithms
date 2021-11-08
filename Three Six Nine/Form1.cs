@@ -13,7 +13,7 @@ namespace Three_Six_Nine
         private List<Button> buttons = new List<Button>();
         private string gameMode;
         //private bool gameStarted;
-        private int playerMove = -1;
+        private bool isRandomPlaying = true;
         #endregion
 
         #region Public Methods
@@ -50,7 +50,7 @@ namespace Three_Six_Nine
             }
             else
             {
-                playerMove = index;
+                
             }        
         }
         private void BtnCreateNewGame(object sender, EventArgs e)
@@ -107,7 +107,7 @@ namespace Three_Six_Nine
         private void NextMove()
         {
             int move = -1;
-            if (board.IsMaximizing)
+            if (!isRandomPlaying)
             {
                 move = board.BestMove();
                 board.P2Score += board.CalculatePoints(board.BoardTable, move);
@@ -121,7 +121,7 @@ namespace Three_Six_Nine
             if(move<0) MessageBox.Show("Blad w przetwarzaniu indeksu");
             else 
             {
-                board.IsMaximizing = !board.IsMaximizing;
+                isRandomPlaying = !isRandomPlaying;
                 board.BoardTable[move] = 1;
                 UpdateBoard(move);
             }

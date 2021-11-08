@@ -106,7 +106,7 @@ namespace Three_Six_Nine
             foreach(int index in indexes)
             {
                 BoardTable[index] = 1;
-                int score = Minimax(BoardTable, 3, false, P1Score, P2Score);
+                int score = Minimax(BoardTable, 2, false, P1Score, P2Score);
                 BoardTable[index] = 0;
                 //Console.Write("["+index+"]: "+score + " ");
                 if(score > bestScore)
