@@ -93,7 +93,7 @@ namespace Three_Six_Nine
             if (amount == 9) score += 3;
             return score;
         }
-        public int EvaluateMove(int[] gameState, bool isMaximizing, int index)
+        public int EvaluateMove(int[] gameState, int index)
         {
             int amount = 0;
             int scoreV = 0;
@@ -136,10 +136,10 @@ namespace Three_Six_Nine
                 value = Math.Min(scoreH, scoreV);
             }
             else if (scoreH == -scoreV)
-            { 
+            {
                 value = 0;
             }
-            else if(scoreH == 0 && scoreV == 0)
+            else if (scoreH == 0 && scoreV == 0)
             {
                 value = 0;
             }
@@ -147,9 +147,6 @@ namespace Three_Six_Nine
             {
                 value = scoreH + scoreV;
             }
-
-            if (isMaximizing) value = -value;
-
             return value;
         }
 
@@ -190,7 +187,8 @@ namespace Three_Six_Nine
             List<int> indexes = GetAllEmptyCellsIndexes(gameState);
             if (indexes.Count == 0 || depth == 0)
             {
-                return EvaluateMove(gameState,isMaximizing, lastIndex);
+                int value = EvaluateMove(gameState, lastIndex);
+                return isMaximizing ? -value : value;
             }
             if (isMaximizing)
             {
