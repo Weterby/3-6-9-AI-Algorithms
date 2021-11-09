@@ -50,7 +50,7 @@ namespace Three_Six_Nine
         public List<int> GetAllEmptyCellsIndexes(int[] gameState)
         {
             List<int> indexes = new List<int>();
-            for(int i = 0; i < gameState.Length; i++)
+            for (int i = 0; i < gameState.Length; i++)
             {
                 if (gameState[i] == 0) indexes.Add(i);
             }
@@ -71,19 +71,19 @@ namespace Three_Six_Nine
             int amount = 0;
             int score = 0;
             int offset = 9;
-            int rowIndex = (index / offset)*offset;
+            int rowIndex = (index / offset) * offset;
             int colIndex = index % offset;
-            for (int i = rowIndex; i < rowIndex+offset; i++)
+            for (int i = rowIndex; i < rowIndex + offset; i++)
             {
                 if (gameState[i] == 1) amount++;
             }
 
             if (amount == 3) score++;
-            if (amount == 6) score+=2;
-            if (amount == 9) score+=3;
+            if (amount == 6) score += 2;
+            if (amount == 9) score += 3;
             amount = 0;
 
-            for (int i = colIndex; i < gameState.Length; i+=9)
+            for (int i = colIndex; i < gameState.Length; i += 9)
             {
                 if (gameState[i] == 1) amount++;
             }
@@ -152,13 +152,14 @@ namespace Three_Six_Nine
 
         public int BestMove()
         {
-            int bestScore =-999;
+            int bestScore = -999;
             int move = -1;
             List<int> indexes = GetAllEmptyCellsIndexes(BoardTable);
-            foreach(int index in indexes)
+            foreach (int index in indexes)
             {
                 BoardTable[index] = 1;
-                int score = Minimax(BoardTable, 1, false, index);
+                int score = -Negamax(BoardTable, 0, index, true);
+                //int score = Minimax(BoardTable, 1, false, index);
                 BoardTable[index] = 0;
                 Console.Write("[" + index + "]: " + score + " ");
                 if (score > bestScore)
@@ -194,7 +195,7 @@ namespace Three_Six_Nine
             {
                 //AI move
                 int bestScore = -999;
-                foreach(int index in indexes)
+                foreach (int index in indexes)
                 {
                     gameState[index] = 1;
                     int score = Minimax(gameState, depth - 1, false, index);
@@ -217,6 +218,26 @@ namespace Three_Six_Nine
                 return bestScore;
             }
         }
-        #endregion
+
+        private int Negamax(int[] gameState, int depth, int lastIndex, bool neg)
+        {
+            List<int> indexes = GetAllEmptyCellsIndexes(gameState);
+            if (indexes.Count == 0 || depth == 0)
+            {
+                int value = EvaluateMove(gameState, lastIndex);
+                return neg ? -value : value;
+            }
+
+            int bestScore = -999;
+            foreach (int index in indexes)
+            {
+                gameState[index] = 1;
+                int score = -Negamax(gameState, depth - 1, index, !neg);
+                gameState[index] = 0;
+                bestScore = Math.Max(score, bestScore);
+            }
+            return bestScore;
+        }
     }
 }
+#endregion
