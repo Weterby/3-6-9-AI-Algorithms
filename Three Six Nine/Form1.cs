@@ -73,7 +73,7 @@ namespace Three_Six_Nine
         private void BtnCreateNewGame(object sender, EventArgs e)
         {
             ClearBoard();
-            //SimulateGame(5);
+            SimulateGame(100);
         }
 
         private void ClearBoard()
