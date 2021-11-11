@@ -9,7 +9,7 @@ namespace Three_Six_Nine
     class Minimax : Algorithm
     {
         private int depth;
-        public Minimax(int[] board, int depth) : base(board)
+        public Minimax(Board board, int depth) : base(board)
         {
             this.depth = depth;
         }
@@ -17,7 +17,7 @@ namespace Three_Six_Nine
         {
             return 0;
         }
-        public override int EvaluateMove() {
+        private int EvaluateMove() {
             return 0;
         }
     }

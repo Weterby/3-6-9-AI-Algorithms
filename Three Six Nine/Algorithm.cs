@@ -8,13 +8,12 @@ namespace Three_Six_Nine
 {
     abstract class Algorithm
     {
-        protected int[] board;
+        protected Board board;
 
-        public Algorithm(int[] board)
+        public Algorithm(Board board)
         {
             this.board = board;
         }
         public abstract int CalculateMove();
-        public abstract int EvaluateMove();
     }
 }

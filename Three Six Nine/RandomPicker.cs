@@ -8,6 +8,10 @@ namespace Three_Six_Nine
 {
     class RandomPicker : Algorithm
     {
+        public RandomPicker(Board board) : base(board)
+        {
+
+        }
         public override int CalculateMove()
         {
             return 0;
