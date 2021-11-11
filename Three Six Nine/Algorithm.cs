@@ -6,15 +6,15 @@ using System.Threading.Tasks;
 
 namespace Three_Six_Nine
 {
-    class Algorithm
+    abstract class Algorithm
     {
-        protected int depth;
-        protected bool isMaximizing;
-        int Depth { get => depth; set => depth = value; }
-        bool IsMaximizing { get => isMaximizing; set => isMaximizing = value; }
-        public virtual int CalculateMove()
+        protected int[] board;
+
+        public Algorithm(int[] board)
         {
-            return 0;
+            this.board = board;
         }
+        public abstract int CalculateMove();
+        public abstract int EvaluateMove();
     }
 }
