@@ -50,15 +50,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
-    <Compile Include="RandomPicker.cs" />
-    <Compile Include="Minimax.cs" />
+    <Compile Include="Algorithm.cs" />
+    <Compile Include="RandomBot.cs" />
+    <Compile Include="MinimaxBot.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="Algorithm.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

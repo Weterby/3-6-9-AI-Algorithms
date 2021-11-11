@@ -38,7 +38,6 @@ namespace Three_Six_Nine
         public Board()
         {
             boardTable = new int[81];
-            isMaximizing = true;
             p1Score = 0;
             p2Score = 0;
         }
@@ -179,41 +178,6 @@ namespace Three_Six_Nine
         #endregion
 
         #region Private Methods
-        private int Minimax(int[] gameState, int depth, bool isMaximizing, int lastIndex)
-        {
-            List<int> indexes = GetAllEmptyCellsIndexes(gameState);
-            if (indexes.Count == 0 || depth == 0)
-            {
-                int value = EvaluateMove(gameState, lastIndex);
-                return isMaximizing ? -value : value;
-            }
-            if (isMaximizing)
-            {
-                //AI move
-                int bestScore = -999;
-                foreach (int index in indexes)
-                {
-                    gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, false, index);
-                    gameState[index] = 0;
-                    bestScore = Math.Max(score, bestScore);
-                }
-                return bestScore;
-            }
-            else
-            {
-                //player simulated move
-                int bestScore = 999;
-                foreach (int index in indexes)
-                {
-                    gameState[index] = 1;
-                    int score = Minimax(gameState, depth - 1, true, index);
-                    gameState[index] = 0;
-                    bestScore = Math.Min(score, bestScore);
-                }
-                return bestScore;
-            }
-        }
 
         private int Negamax(int[] gameState, int depth, int lastIndex, bool neg)
         {
