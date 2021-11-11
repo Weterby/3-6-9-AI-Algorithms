@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Three_Six_Nine
 {
-    class RandomPicker : Algorithm
+    class RandomBot : Algorithm
     {
-        public RandomPicker(Board board) : base(board)
+        public RandomBot(Board board) : base(board)
         {
 
         }
