@@ -14,7 +14,10 @@ namespace Three_Six_Nine
         }
         public override int CalculateMove()
         {
-            return 0;
+            List<int> indexes = board.GetAllEmptyCellsIndexes(board.BoardTable);
+            Random rand = new Random();
+            int move = indexes[rand.Next(indexes.Count)];
+            return move;
         }
     }
 }

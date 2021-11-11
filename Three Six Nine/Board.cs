@@ -168,13 +168,7 @@ namespace Three_Six_Nine
             Console.WriteLine("p1:" + P1Score + ", AI: " + P2Score);
             return move;
         }
-        public int RandomPick()
-        {
-            List<int> indexes = GetAllEmptyCellsIndexes(BoardTable);
-            Random rand = new Random();
-            int move = indexes[rand.Next(indexes.Count)];
-            return move;
-        }
+        
         #endregion
 
         #region Private Methods
