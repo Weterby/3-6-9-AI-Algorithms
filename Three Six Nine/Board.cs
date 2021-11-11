@@ -11,7 +11,6 @@ namespace Three_Six_Nine
         #region Private Fields
 
         private int[] boardTable;
-        private bool isMaximizing;
         private int p1Score;
         private int p2Score;
 
@@ -23,10 +22,7 @@ namespace Three_Six_Nine
             get { return boardTable; }
             set { boardTable = value; }
         }
-        public bool IsMaximizing {
-            get { return isMaximizing; }
-            set { isMaximizing = value; }
-        }
+
         public int P1Score {
             get { return p1Score; }
             set { p1Score = value; }
