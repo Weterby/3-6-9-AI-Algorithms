@@ -54,7 +54,24 @@ namespace Three_Six_Nine
                 {
                     p2Wins++;
                 }
+
+                p1Avg += board.P1Score;
+                p2Avg += board.P2Score;
+                board.ClearBoard();
             }
+
+            p1Wins /= gameAmount;
+            p2Wins /= gameAmount;
+            p1Avg /= gameAmount;
+            p2Avg /= gameAmount;
+
+            Console.WriteLine($"Simulated games amount: {gameAmount}");
+            Console.WriteLine($"Player1 ({player1.GetType().Name}): ");
+            Console.WriteLine($"    Win %: {p1Wins * 100}");
+            Console.WriteLine($"    Avg points earned: {p1Avg}");
+            Console.WriteLine($"Player2 ({player2.GetType().Name}): ");
+            Console.WriteLine($"    Win %: {p2Wins * 100}");
+            Console.WriteLine($"    Avg points earned: {p2Avg}");
         }
 
         private void NextMove()
