@@ -13,7 +13,7 @@ namespace Three_Six_Nine
         {
             this.depth = depth;
         }
-        public override int CalculateMove()
+        public override int MakeMove()
         {
             int bestScore = -999;
             int move = -1;
@@ -23,7 +23,7 @@ namespace Three_Six_Nine
             foreach (int index in indexes)
             {
                 gameState[index] = 1;
-                int score = Minimax(gameState, depth, false, index);
+                int score = Minimax(gameState, depth-1, false, index);
                 gameState[index] = 0;
                 //Console.Write("[" + index + "]: " + score + " ");
                 if (score > bestScore)

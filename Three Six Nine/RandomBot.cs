@@ -12,7 +12,7 @@ namespace Three_Six_Nine
         {
 
         }
-        public override int CalculateMove()
+        public override int MakeMove()
         {
             List<int> indexes = board.GetAllEmptyCellsIndexes(board.BoardTable);
             Random rand = new Random();

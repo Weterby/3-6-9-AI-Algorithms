@@ -14,6 +14,6 @@ namespace Three_Six_Nine
         {
             this.board = board;
         }
-        public abstract int CalculateMove();
+        public abstract int MakeMove();
     }
 }
