@@ -27,7 +27,7 @@ namespace Three_Six_Nine
         private float p1Avg = 0;
         private float p2Avg = 0;
 
-        public Simulation(Board board, Algorithm player1, Algorithm player2, int gameAmount, bool auto=false)
+        public Simulation(Board board, Algorithm player1, Algorithm player2, int gameAmount=100, bool auto=false)
         {
             this.board = board;
             this.player1 = player1;
@@ -92,8 +92,6 @@ namespace Three_Six_Nine
                 board.P2Score += board.CalculatePoints(board.BoardTable, move);
                 playerTurn = PlayerTurn.PlayerOne;
             }
-
-                //UpdateBoard(move);
         }
     }
 }
