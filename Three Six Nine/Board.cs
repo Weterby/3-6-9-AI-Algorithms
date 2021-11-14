@@ -88,7 +88,10 @@ namespace Three_Six_Nine
             if (amount == 9) score += 3;
             return score;
         }
-        
+        public void ClearBoard()
+        {
+            BoardTable = new int[81];
+        }
     }
 }
 #endregion
