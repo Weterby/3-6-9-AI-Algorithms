@@ -20,18 +20,20 @@ namespace Three_Six_Nine
         private PlayerTurn playerTurn;
 
         private int gameAmount;
+        private bool auto;
 
         private float p1Wins = 0;
         private float p2Wins = 0;
         private float p1Avg = 0;
         private float p2Avg = 0;
 
-        public Simulation(Board board, Algorithm player1, Algorithm player2, int gameAmount)
+        public Simulation(Board board, Algorithm player1, Algorithm player2, int gameAmount, bool auto=false)
         {
             this.board = board;
             this.player1 = player1;
             this.player2 = player2;
             this.gameAmount = gameAmount;
+            this.auto = auto;
 
             playerTurn = PlayerTurn.PlayerOne;
         }
@@ -76,7 +78,7 @@ namespace Three_Six_Nine
 
         private void NextMove()
         {
-            if (playerTurn == PlayerTurn.PlayerOne)
+            if (playerTurn == PlayerTurn.PlayerOne && !auto)
             {
                 int move = player1.MakeMove();
                 board.BoardTable[move] = 1;
