@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 
 namespace Three_Six_Nine
 {
-    class RandomPicker : Algorithm
+    abstract class Algorithm
     {
-        public override int CalculateMove()
+        protected Board board;
+
+        public Algorithm(Board board)
         {
-            return 0;
+            this.board = board;
         }
+        public abstract int MakeMove();
     }
 }
