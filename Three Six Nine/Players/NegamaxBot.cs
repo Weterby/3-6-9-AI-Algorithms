@@ -9,9 +9,12 @@ namespace Three_Six_Nine
     class NegamaxBot : Algorithm
     {
         private int depth;
+        private bool neg;
         public NegamaxBot(Board board, int depth) : base(board)
         {
             this.depth = depth;
+            if (depth % 2 == 1) neg = true;
+            else neg = false;
         }
         public override int MakeMove()
         {
@@ -22,7 +25,7 @@ namespace Three_Six_Nine
             foreach (int index in indexes)
             {
                 gameState[index] = 1;
-                int score = -Negamax(gameState, depth-1, index, true);
+                int score = -Negamax(gameState, depth-1, index, neg);
                 gameState[index] = 0;
                 //Console.Write("[" + index + "]: " + score + " ");
                 if (score > bestScore)
