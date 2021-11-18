@@ -60,7 +60,10 @@ namespace Three_Six_Nine
         {
             return P1Score > P2Score ? 1 : 2;
         }
-
+        public void MarkField(int index)
+        {
+            BoardTable[index] = 1;
+        }
         public int CalculatePoints(int[] gameState, int index)
         {
             int amount = 0;
@@ -88,9 +91,11 @@ namespace Three_Six_Nine
             if (amount == 9) score += 3;
             return score;
         }
-        public void ClearBoard()
+        public void ResetBoard()
         {
             BoardTable = new int[81];
+            p1Score = 0;
+            p2Score = 0;
         }
     }
 }
