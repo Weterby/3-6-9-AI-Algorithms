@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Three_Six_Nine
 {
-    class Simulation
+    class Game
     {
         private enum PlayerTurn
         {
@@ -20,28 +20,27 @@ namespace Three_Six_Nine
         private PlayerTurn playerTurn;
 
         private int gameAmount;
-        private bool auto;
 
         private float p1Wins = 0;
         private float p2Wins = 0;
         private float p1Avg = 0;
         private float p2Avg = 0;
 
-        public Simulation(Board board, Algorithm player1, Algorithm player2, int gameAmount=100, bool auto=false)
+        public Game(Board board, Algorithm player1, Algorithm player2, int gameAmount=100)
         {
             this.board = board;
             this.player1 = player1;
             this.player2 = player2;
             this.gameAmount = gameAmount;
-            this.auto = auto;
 
             playerTurn = PlayerTurn.PlayerOne;
         }
 
         public void StartSimulation()
-        {
+        {      
             for (int i = 0; i < gameAmount; i++)
             {
+                playerTurn = PlayerTurn.PlayerOne;
                 while (board.RemainingMoves() > 0)
                 {
                     NextMove();
@@ -59,7 +58,7 @@ namespace Three_Six_Nine
 
                 p1Avg += board.P1Score;
                 p2Avg += board.P2Score;
-                board.ClearBoard();
+                board.ResetBoard();
             }
 
             p1Wins /= gameAmount;
@@ -75,21 +74,40 @@ namespace Three_Six_Nine
             Console.WriteLine($"    Win %: {p2Wins * 100}");
             Console.WriteLine($"    Avg points earned: {p2Avg}");
         }
-
-        private void NextMove()
+        public int PerformAIMove()
         {
-            if (playerTurn == PlayerTurn.PlayerOne && !auto)
+            ChangeTurn();
+            int move = NextMove();
+            return move;
+        }
+        private int NextMove()
+        {
+            int move = -1;
+            if (playerTurn == PlayerTurn.PlayerOne)
             {
-                int move = player1.MakeMove();
-                board.BoardTable[move] = 1;
+                move = player1.MakeMove();
+                board.MarkField(move);
                 board.P1Score += board.CalculatePoints(board.BoardTable, move);
+                ChangeTurn();
+            }
+            else
+            {
+                move = player2.MakeMove();
+                board.MarkField(move);
+                board.P2Score += board.CalculatePoints(board.BoardTable, move);
+                ChangeTurn();
+            }
+            return move;
+        }
+
+        private void ChangeTurn()
+        {
+            if (playerTurn == PlayerTurn.PlayerOne)
+            {
                 playerTurn = PlayerTurn.PlayerTwo;
             }
             else
             {
-                int move = player2.MakeMove();
-                board.BoardTable[move] = 1;
-                board.P2Score += board.CalculatePoints(board.BoardTable, move);
                 playerTurn = PlayerTurn.PlayerOne;
             }
         }
