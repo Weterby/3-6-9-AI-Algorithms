@@ -11,9 +11,13 @@ namespace Three_Six_Nine
 
         private Board board;
         private List<Button> buttons = new List<Button>();
-        private string gameMode;
-        //private bool gameStarted;
-        private bool isRandomPlaying = true;
+        private string player1Type;
+        private string player2Type;
+        private bool gameStarted = false;
+
+        private Algorithm player1;
+        private Algorithm player2;
+        private Game game;
         #endregion
 
         #region Public Methods
@@ -26,6 +30,7 @@ namespace Three_Six_Nine
                 if (c.GetType() == typeof(Button))
                 {
                     buttons.Add(c as Button);
+                    c.Enabled = false;
                 }
             }
         }
@@ -33,6 +38,60 @@ namespace Three_Six_Nine
 
         #region Private Methods
 
+        private void UpdateBoard()
+        {
+            p1Label.Text = "Player 1: " + board.P1Score;
+            p2Label.Text = "Player 2: " + board.P2Score;
+        }
+        private void UpdateField(int index)
+        {
+            Button obj = buttons.Find(x => x.Name.Equals("button" + index));
+            obj.BackColor = Color.Black;
+            obj.Enabled = false;
+        }
+
+        private Algorithm InitializePlayer(string playerType, int depth=1)
+        {
+            Algorithm player = null;
+            switch (playerType)
+            {
+                case "Player":
+                    break;
+
+                case "AI(Minimax)":
+                    player = new MinimaxBot(board,depth);
+                    break;
+
+                case "AI(Negamax)":
+                    player = new NegamaxBot(board, depth);
+                    break;
+
+                case "RandomBot":
+                    player = new RandomBot(board);
+                    break;
+            }
+            return player;
+        }
+        #endregion
+        private void ClearBoard()
+        {
+            foreach (Button b in buttons) b.BackColor = Color.LightGray;
+        }
+        #region Form Events
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            comboBox1.Items.Add("Player");
+            comboBox1.Items.Add("AI(Minimax)");
+            comboBox1.Items.Add("AI(Negamax)");
+            comboBox1.Items.Add("RandomBot");
+            comboBox1.Text = "RandomBot";
+
+            comboBox2.Items.Add("AI(Minimax)");
+            comboBox2.Items.Add("AI(Negamax)");
+            comboBox2.Items.Add("RandomBot");
+            comboBox2.Text = "AI(Minimax)";
+            ClearBoard();
+        }
         private void onBtnClick(object sender, EventArgs e)
         {
             Button btn = sender as Button;
@@ -48,124 +107,56 @@ namespace Three_Six_Nine
             }
             else
             {
-                board.BoardTable[index] = 1;
+                board.MarkField(index);
                 int score = board.CalculatePoints(board.BoardTable, index);
                 board.P1Score += score;
-                p1Label.Text = "Player 1: " + board.P1Score;
-                board.IsMaximizing = !board.IsMaximizing;
+                UpdateBoard();
             }
-            List<int> list = board.GetAllEmptyCellsIndexes(board.BoardTable);
 
-            if (list.Count() == 0) MessageBox.Show("Player " + board.CheckWinner() + " wins!");
+            if (board.RemainingMoves() == 0)
+            { 
+                MessageBox.Show("Player " + board.CheckWinner() + " wins!");
+                gameStarted = false;
+            }
             else
             {
-                int btnNumber = board.BestMove();
-                board.BoardTable[btnNumber] = 1;
-                int score = board.CalculatePoints(board.BoardTable, btnNumber);
-                board.IsMaximizing = !board.IsMaximizing;
-                board.P2Score += score;
-                p2Label.Text = "Player 2: " + board.P2Score;
-                Button obj = buttons.Find(x => x.Name.Equals("button" + btnNumber));
-                obj.BackColor = Color.Black;
-                obj.Enabled = false;
+                int btnNumber = game.PerformAIMove();
+                UpdateBoard();
+                UpdateField(btnNumber);
             }
         }
         private void BtnCreateNewGame(object sender, EventArgs e)
         {
             ClearBoard();
-            SimulateGame(100);
-        }
-
-        private void ClearBoard()
-        {
             board = new Board();
-
-            foreach (Button btn in buttons)
+            gameStarted = true;
+            if (player1Type.Equals("Player"))
             {
-                if (gameMode.Equals("AI vs Player"))
-                {
-                    btn.Enabled = true;
-                }
-                else btn.Enabled = false;
-                btn.BackColor = Color.LightGray;
-            }
-        }
-        private void SimulateGame(int gameAmount)
-        {
-            float randomWins = 0;
-            float aiWins = 0;
-            float randomAvg = 0;
-            float aiAvg = 0;
-            for (int i = 0; i < gameAmount; i++)
-            {
-                while (board.RemainingMoves() > 0) NextMove();
-                if (board.CheckWinner() == 2)
-                {
-                    aiWins++;
-                }
-                else randomWins++;
-                randomAvg += board.P1Score;
-                aiAvg += board.P2Score;
-                ClearBoard();
-            }
-            randomWins /= gameAmount;
-            aiWins /= gameAmount;
-            aiAvg /= gameAmount;
-            randomAvg /= gameAmount;
-
-            Console.WriteLine($"Simulated games amount: {gameAmount}");
-            Console.WriteLine("RandomBot: ");
-            Console.WriteLine($"    Win %: {randomWins * 100}");
-            Console.WriteLine($"    Avg points earned: {randomAvg}");
-            Console.WriteLine("AI: ");
-            Console.WriteLine($"    Win %: {aiWins * 100}");
-            Console.WriteLine($"    Avg points earned: {aiAvg}");
-        }
-        private void NextMove()
-        {
-            int move = -1;
-            if (!isRandomPlaying)
-            {
-                move = board.BestMove();
-                board.BoardTable[move] = 1;
-                board.P2Score += board.CalculatePoints(board.BoardTable, move);
+                foreach (Button b in buttons) b.Enabled = true;
             }
             else
             {
-                move = board.RandomPick();
-                board.BoardTable[move] = 1;
-                board.P1Score += board.CalculatePoints(board.BoardTable, move);
+                foreach (Button b in buttons) b.Enabled = false;
             }
+            player1 = InitializePlayer(player1Type,1);
+            player2 = InitializePlayer(player2Type,1);
 
-            if(move<0) MessageBox.Show("Blad w przetwarzaniu indeksu");
-            else 
+            game = new Game(board, player1, player2, 3);
+            if(player1!= null)
             {
-                isRandomPlaying = !isRandomPlaying;
-                UpdateBoard(move);
+                game.StartSimulation();
+                UpdateBoard();
             }
             
         }
-
-        private void UpdateBoard(int index)
-        {
-            Button obj = buttons.Find(x => x.Name.Equals("button" + index));
-            obj.BackColor = Color.Black;
-            obj.Enabled = false;
-
-            p1Label.Text = "Player 1: " + board.P1Score;
-            p2Label.Text = "Player 2: " + board.P2Score;
-        }
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            comboBox1.Items.Add("AI vs Random");
-            comboBox1.Items.Add("AI vs Player");
-            comboBox1.Text = "AI vs Random";       
-        }
-        #endregion
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            gameMode = comboBox1.SelectedItem.ToString();
+            player1Type = comboBox1.SelectedItem.ToString();
         }
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            player2Type = comboBox2.SelectedItem.ToString();
+        }
+        #endregion
     }
 }
