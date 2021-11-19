@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Board.cs" />
     <Compile Include="Players\Algorithm.cs" />
+    <Compile Include="Players\AlphabetaBot.cs" />
     <Compile Include="Players\NegamaxBot.cs" />
     <Compile Include="Players\RandomBot.cs" />
     <Compile Include="Players\MinimaxBot.cs" />

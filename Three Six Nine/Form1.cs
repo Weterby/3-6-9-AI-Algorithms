@@ -66,6 +66,10 @@ namespace Three_Six_Nine
                     player = new NegamaxBot(board, depth);
                     break;
 
+                case "AI(Alphabeta)":
+                    player = new AlphabetaBot(board, depth);
+                    break;
+
                 case "RandomBot":
                     player = new RandomBot(board);
                     break;
@@ -83,11 +87,13 @@ namespace Three_Six_Nine
             comboBox1.Items.Add("Player");
             comboBox1.Items.Add("AI(Minimax)");
             comboBox1.Items.Add("AI(Negamax)");
+            comboBox1.Items.Add("AI(Alphabeta)");
             comboBox1.Items.Add("RandomBot");
             comboBox1.Text = "RandomBot";
 
             comboBox2.Items.Add("AI(Minimax)");
             comboBox2.Items.Add("AI(Negamax)");
+            comboBox2.Items.Add("AI(Alphabeta)");
             comboBox2.Items.Add("RandomBot");
             comboBox2.Text = "AI(Minimax)";
             ClearBoard();
@@ -138,10 +144,10 @@ namespace Three_Six_Nine
             {
                 foreach (Button b in buttons) b.Enabled = false;
             }
-            player1 = InitializePlayer(player1Type,1);
-            player2 = InitializePlayer(player2Type,1);
+            player1 = InitializePlayer(player1Type,2);
+            player2 = InitializePlayer(player2Type,2);
 
-            game = new Game(board, player1, player2, 3);
+            game = new Game(board, player1, player2, 100);
             if(player1!= null)
             {
                 game.StartSimulation();

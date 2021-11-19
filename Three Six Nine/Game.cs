@@ -37,7 +37,9 @@ namespace Three_Six_Nine
         }
 
         public void StartSimulation()
-        {      
+        {
+            var watch = new System.Diagnostics.Stopwatch();
+            watch.Start();
             for (int i = 0; i < gameAmount; i++)
             {
                 playerTurn = PlayerTurn.PlayerOne;
@@ -60,13 +62,14 @@ namespace Three_Six_Nine
                 p2Avg += board.P2Score;
                 board.ResetBoard();
             }
-
+            watch.Stop();
             p1Wins /= gameAmount;
             p2Wins /= gameAmount;
             p1Avg /= gameAmount;
             p2Avg /= gameAmount;
 
             Console.WriteLine($"Simulated games amount: {gameAmount}");
+            Console.WriteLine($"Execution Time: {watch.ElapsedMilliseconds} ms");
             Console.WriteLine($"Player1 ({player1.GetType().Name}): ");
             Console.WriteLine($"    Win %: {p1Wins * 100}");
             Console.WriteLine($"    Avg points earned: {p1Avg}");
