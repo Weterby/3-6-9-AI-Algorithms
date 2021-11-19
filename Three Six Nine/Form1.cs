@@ -70,6 +70,10 @@ namespace Three_Six_Nine
                     player = new AlphabetaBot(board, depth);
                     break;
 
+                case "AI(AbNegamax)":
+                    player = new AbNegamaxBot(board, depth);
+                    break;
+
                 case "RandomBot":
                     player = new RandomBot(board);
                     break;
@@ -88,12 +92,14 @@ namespace Three_Six_Nine
             comboBox1.Items.Add("AI(Minimax)");
             comboBox1.Items.Add("AI(Negamax)");
             comboBox1.Items.Add("AI(Alphabeta)");
+            comboBox1.Items.Add("AI(AbNegamax)");
             comboBox1.Items.Add("RandomBot");
             comboBox1.Text = "RandomBot";
 
             comboBox2.Items.Add("AI(Minimax)");
             comboBox2.Items.Add("AI(Negamax)");
             comboBox2.Items.Add("AI(Alphabeta)");
+            comboBox2.Items.Add("AI(AbNegamax)");
             comboBox2.Items.Add("RandomBot");
             comboBox2.Text = "AI(Minimax)";
             ClearBoard();

@@ -50,6 +50,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
+    <Compile Include="Players\AbNegamaxBot.cs" />
     <Compile Include="Players\Algorithm.cs" />
     <Compile Include="Players\AlphabetaBot.cs" />
     <Compile Include="Players\NegamaxBot.cs" />
