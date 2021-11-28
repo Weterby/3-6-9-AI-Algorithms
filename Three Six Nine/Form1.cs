@@ -74,6 +74,10 @@ namespace Three_Six_Nine
                     player = new AbNegamaxBot(board, depth);
                     break;
 
+                case "AI(IterativeDeepening)":
+                    player = new IterativeDeepening(board, 5);
+                    break;
+
                 case "RandomBot":
                     player = new RandomBot(board);
                     break;
@@ -93,6 +97,7 @@ namespace Three_Six_Nine
             comboBox1.Items.Add("AI(Negamax)");
             comboBox1.Items.Add("AI(Alphabeta)");
             comboBox1.Items.Add("AI(AbNegamax)");
+            comboBox1.Items.Add("AI(IterativeDeepening)");
             comboBox1.Items.Add("RandomBot");
             comboBox1.Text = "RandomBot";
 
@@ -100,6 +105,7 @@ namespace Three_Six_Nine
             comboBox2.Items.Add("AI(Negamax)");
             comboBox2.Items.Add("AI(Alphabeta)");
             comboBox2.Items.Add("AI(AbNegamax)");
+            comboBox2.Items.Add("AI(IterativeDeepening)");
             comboBox2.Items.Add("RandomBot");
             comboBox2.Text = "AI(Minimax)";
             ClearBoard();
