@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace Three_Six_Nine
 {
-    class IterativeDeepening : Algorithm
+    class IterativeDeepeningBot : Algorithm
     {
         private int depth;
         private bool neg;
-        private long timePerMove = 2;
+        private long timePerMove = 5;
         private bool timeout;
         private Stopwatch watch;
-        public IterativeDeepening(Board board, int depth) : base(board)
+        public IterativeDeepeningBot(Board board, int depth) : base(board)
         {
             this.depth = depth;
 
@@ -34,7 +34,7 @@ namespace Three_Six_Nine
 
             foreach (int index in indexes)
             {
-                
+
                 gameState[index] = 1;
                 int score = -AbNegamax(gameState, depth - 1, index, neg);
                 gameState[index] = 0;
@@ -63,7 +63,7 @@ namespace Three_Six_Nine
         {
             List<int> indexes = board.GetAllEmptyCellsIndexes(gameState);
 
-            
+
             if (indexes.Count == 0 || depth == 0)
             {
                 int value = EvaluateMove(gameState, lastIndex);
@@ -80,7 +80,7 @@ namespace Three_Six_Nine
                 gameState[index] = 1;
                 alpha = Math.Max(alpha, -AbNegamax(gameState, depth - 1, index, !neg, alpha, beta));
                 gameState[index] = 0;
-                
+
                 if (alpha >= beta) return beta;
             }
             return alpha;

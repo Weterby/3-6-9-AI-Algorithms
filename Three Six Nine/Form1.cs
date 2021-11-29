@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
 using System.Windows.Forms;
 namespace Three_Six_Nine
 {
@@ -75,7 +74,7 @@ namespace Three_Six_Nine
                     break;
 
                 case "AI(IterativeDeepening)":
-                    player = new IterativeDeepening(board, 5);
+                    player = new IterativeDeepeningBot(board, 5);
                     break;
 
                 case "RandomBot":
