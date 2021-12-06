@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Three_Six_Nine.PNS.Data
 {
-    enum ValueType
+    enum NodeValue
     {
         Win,
         Lose,
