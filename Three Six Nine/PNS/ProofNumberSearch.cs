@@ -10,10 +10,10 @@ namespace Three_Six_Nine.PNS
     class ProofNumberSearch
     {
         private Node root;
-        //evaluateNode
+        private Resource resource;
         public ProofNumberSearch()
         {
-
+            resource = new Resource();
         }
 
         private void ExpandNode(Node node)
@@ -46,18 +46,25 @@ namespace Three_Six_Nine.PNS
                     node.Disproof = Int32.MaxValue;
                     foreach (Node child in node.Children)
                     {
-                        node.Proof += child.Proof;
+                        if (isIntValueExceeded(node.Proof, child.Proof))
+                        {
+                            node.Proof = Int32.MaxValue;
+                        }
+                        else node.Proof += child.Proof;
                         node.Disproof = Math.Min(node.Disproof, child.Disproof);
                     }
                 }
-
-                if (node.Type == NodeType.Or)
+                else
                 {
                     node.Proof = Int32.MaxValue;
                     node.Disproof = 0;
                     foreach (Node child in node.Children)
                     {
-                        node.Disproof += child.Disproof;
+                        if (isIntValueExceeded(node.Disproof, child.Disproof))
+                        {
+                            node.Disproof = Int32.MaxValue;
+                        }
+                        else node.Disproof += child.Disproof;
                         node.Proof = Math.Min(node.Proof, child.Proof);
                     }
                 }
@@ -140,20 +147,21 @@ namespace Three_Six_Nine.PNS
             return root;
         }
     
-        private void ProofSearch(Node root)
+        private Node Search(Node root)
         {
             EvaluateNode(root);
             SetProofAndDisproofNumbers(root);
             Node current = root;
 
-            while(root.Proof != 0 && root.Disproof != 0
-                //&& ResourcesAvailable()
-                )
+            while(root.Proof != 0 && root.Disproof != 0 && resource.IsAvailable())
             {
                 Node mostProving = SelectMostProvingNode(current);
                 ExpandNode(mostProving);
                 current = UpdateAncestors(mostProving, root);
             }
+
+            Node best = GetBestMove(root);
+            return best;
         }
 
         private void EvaluateNode(Node node)
@@ -164,6 +172,32 @@ namespace Three_Six_Nine.PNS
             if (aiScore - playerScore > 0) node.Value = NodeValue.Win;
             else if (aiScore - playerScore < 0) node.Value = NodeValue.Lose;
             else node.Value = NodeValue.Unknown;
+        }
+
+        private Node GetBestMove(Node root)
+        {
+            if (root.Children.Count == 0)
+                return null;
+
+            float value = 0;
+            Node best = null;
+
+            foreach(Node child in root.Children)
+            {
+                float childValue = (float)child.Disproof / (float)child.Proof;
+                if (childValue > value)
+                {
+                    value = childValue;
+                    best = child;
+                }
+            }
+
+            return best;
+        }
+
+        private bool isIntValueExceeded(int num1, int num2)
+        {
+            return ((long)num1) + ((long)num2) >= Int32.MaxValue;
         }
     }
 }

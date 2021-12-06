@@ -65,7 +65,7 @@ namespace Three_Six_Nine.PNS
                 Board boardCopy = board.DeepCopy();
                 boardCopy.BoardTable[index] = 1;
 
-                if (Type == NodeType.Or) boardCopy.P2Score += boardCopy.CalculatePoints(boardCopy.BoardTable, index);
+                if (Type == NodeType.And) boardCopy.P2Score += boardCopy.CalculatePoints(boardCopy.BoardTable, index);
                 else boardCopy.P1Score += boardCopy.CalculatePoints(boardCopy.BoardTable, index);
 
                 Node child = new Node(boardCopy, (Type == NodeType.And ? NodeType.Or : NodeType.And), this);
