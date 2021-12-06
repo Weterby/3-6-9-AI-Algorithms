@@ -12,7 +12,6 @@ namespace Three_Six_Nine.PNS
         private Node root;
         //expandNode
         //pns algorithm
-        //selectMostProvingNode
         //updateAncestors
         //evaluateNode
         public ProofNumberSearch()
@@ -119,6 +118,29 @@ namespace Three_Six_Nine.PNS
             }
 
             return node;
+        }
+    
+        private Node UpdateAncestors(Node node, Node root)
+        {
+            int oldProof;
+            int oldDisproof;
+
+            while(node != root)
+            {
+                oldProof = node.Proof;
+                oldDisproof = node.Disproof;
+
+                SetProofAndDisproofNumbers(node);
+                if (node.Proof == oldProof && node.Disproof == oldDisproof)
+                {
+                    return node;
+                }
+
+                node = node.Parent;
+            }
+            SetProofAndDisproofNumbers(root);
+
+            return root;
         }
     }
 }
