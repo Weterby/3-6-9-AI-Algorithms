@@ -23,6 +23,9 @@ namespace Three_Six_Nine.PNS
 
         private List<Node> children;
 
+        #endregion
+
+        #region Public Properties
         internal Board Board { get => board; set => board = value; }
         internal NodeType Type { get => type; set => type = value; }
         internal NodeValue Value { get => value; set => this.value = value; }
@@ -34,9 +37,7 @@ namespace Three_Six_Nine.PNS
 
 
 
-        #endregion
 
-        #region Public Properties
 
         #endregion
 
@@ -61,9 +62,11 @@ namespace Three_Six_Nine.PNS
         {
             foreach (int index in Board.GetAllEmptyCellsIndexes(Board.BoardTable))
             {
-                Board boardCopy = new Board();
-                boardCopy.BoardTable = Board.DeepCopy();
+                Board boardCopy = board.DeepCopy();
                 boardCopy.BoardTable[index] = 1;
+
+                if (Type == NodeType.Or) boardCopy.P2Score += boardCopy.CalculatePoints(boardCopy.BoardTable, index);
+                else boardCopy.P1Score += boardCopy.CalculatePoints(boardCopy.BoardTable, index);
 
                 Node child = new Node(boardCopy, (Type == NodeType.And ? NodeType.Or : NodeType.And), this);
 

@@ -98,15 +98,19 @@ namespace Three_Six_Nine
             p2Score = 0;
         }
 
-        public int[] DeepCopy()
+        public Board DeepCopy()
         {
-            int[] copy = new int[81];
+            Board boardCopy = new Board();
+            boardCopy.BoardTable = new int[81];
+
+            boardCopy.P1Score = P1Score;
+            boardCopy.P2Score = P2Score;
 
             for(int i = 0; i <= BoardTable.Length; i++)
             {
-                copy[i] = BoardTable[i];
+                boardCopy.BoardTable[i] = BoardTable[i];
             }
-            return copy;
+            return boardCopy;
         }
     }
 }
