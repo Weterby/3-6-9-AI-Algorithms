@@ -63,6 +63,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="PNS\Data\NodeType.cs" />
+    <Compile Include="PNS\Data\NodeValue.cs" />
+    <Compile Include="PNS\Data\Resource.cs" />
+    <Compile Include="PNS\Node.cs" />
+    <Compile Include="PNS\ProofNumberSearch.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Game.cs" />
