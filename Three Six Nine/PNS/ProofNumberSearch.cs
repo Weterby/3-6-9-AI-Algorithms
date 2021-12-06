@@ -13,7 +13,6 @@ namespace Three_Six_Nine.PNS
         //expandNode
         //pns algorithm
         //selectMostProvingNode
-        //setProofAndDisproofNumbers
         //updateAncestors
         //evaluateNode
         public ProofNumberSearch()
@@ -27,7 +26,7 @@ namespace Three_Six_Nine.PNS
             foreach(Node child in node.Children)
             {
                 //EvaluateNode(child);
-                //SetProofAndDisproofNumbers(child);
+                SetProofAndDisproofNumbers(child);
                 if(node.Type == NodeType.And)
                 {
                     if(child.Disproof == 0) break;
@@ -85,6 +84,41 @@ namespace Three_Six_Nine.PNS
                         break;
                 }
             }
+        }
+        
+        private Node SelectMostProvingNode(Node node)
+        {
+            Node best = null;
+
+            while (node.IsExpanded)
+            {
+                int value = Int32.MaxValue;
+                if (node.Type == NodeType.And)
+                {
+                    foreach(Node child in node.Children)
+                    {
+                        if(value > child.Disproof)
+                        {
+                            best = child;
+                            value = child.Disproof;
+                        }
+                    }
+                }
+                if (node.Type == NodeType.Or)
+                {
+                    foreach (Node child in node.Children)
+                    {
+                        if (value > child.Proof)
+                        {
+                            best = child;
+                            value = child.Proof;
+                        }
+                    }
+                }
+                node = best;
+            }
+
+            return node;
         }
     }
 }
