@@ -97,6 +97,17 @@ namespace Three_Six_Nine
             p1Score = 0;
             p2Score = 0;
         }
+
+        public int[] DeepCopy()
+        {
+            int[] copy = new int[81];
+
+            for(int i = 0; i <= BoardTable.Length; i++)
+            {
+                copy[i] = BoardTable[i];
+            }
+            return copy;
+        }
     }
 }
 #endregion
