@@ -10,7 +10,6 @@ namespace Three_Six_Nine.PNS
     class ProofNumberSearch
     {
         private Node root;
-        //pns algorithm
         //evaluateNode
         public ProofNumberSearch()
         {
@@ -22,7 +21,7 @@ namespace Three_Six_Nine.PNS
             node.GenerateChildren();
             foreach(Node child in node.Children)
             {
-                //EvaluateNode(child);
+                EvaluateNode(child);
                 SetProofAndDisproofNumbers(child);
                 if(node.Type == NodeType.And)
                 {
@@ -143,7 +142,7 @@ namespace Three_Six_Nine.PNS
     
         private void ProofSearch(Node root)
         {
-            //Evaluate(root);
+            EvaluateNode(root);
             SetProofAndDisproofNumbers(root);
             Node current = root;
 
@@ -155,6 +154,16 @@ namespace Three_Six_Nine.PNS
                 ExpandNode(mostProving);
                 current = UpdateAncestors(mostProving, root);
             }
+        }
+
+        private void EvaluateNode(Node node)
+        {
+            int playerScore = node.Board.P1Score;
+            int aiScore = node.Board.P2Score;
+
+            if (aiScore - playerScore > 0) node.Value = NodeValue.Win;
+            else if (aiScore - playerScore < 0) node.Value = NodeValue.Lose;
+            else node.Value = NodeValue.Unknown;
         }
     }
 }
