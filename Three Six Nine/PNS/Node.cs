@@ -45,6 +45,7 @@ namespace Three_Six_Nine.PNS
             {
                 Board boardCopy = new Board();
                 boardCopy.BoardTable = board.DeepCopy();
+                boardCopy.BoardTable[index] = 1;
 
                 Node child = new Node(boardCopy, (type == NodeType.And ? NodeType.Or : NodeType.And), this);
 
