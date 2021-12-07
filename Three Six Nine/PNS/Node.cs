@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using Three_Six_Nine.PNS.Data;
 
 namespace Three_Six_Nine.PNS
@@ -23,6 +19,8 @@ namespace Three_Six_Nine.PNS
 
         private List<Node> children;
 
+        private int index;
+
         #endregion
 
         #region Public Properties
@@ -34,6 +32,7 @@ namespace Three_Six_Nine.PNS
         public bool IsExpanded { get => isExpanded; set => isExpanded = value; }
         internal Node Parent { get => parent; set => parent = value; }
         internal List<Node> Children { get => children; set => children = value; }
+        public int Index { get => index; set => index = value; }
 
 
 
@@ -41,11 +40,12 @@ namespace Three_Six_Nine.PNS
 
         #endregion
 
-        public Node(Board board, NodeType type, Node parent)
+        public Node(Board board, NodeType type, Node parent, int index)
         {
             this.Board = board;
             this.Type = type;
             this.Parent = parent;
+            this.Index = index;
 
             InitializeValues();
         }
@@ -56,19 +56,20 @@ namespace Three_Six_Nine.PNS
             IsExpanded = false;
             Proof = 0;
             Disproof = 0;
+            Children = new List<Node>();
         }
 
         public void GenerateChildren()
         {
             foreach (int index in Board.GetAllEmptyCellsIndexes(Board.BoardTable))
             {
-                Board boardCopy = board.DeepCopy();
+                Board boardCopy = Board.DeepCopy();
                 boardCopy.BoardTable[index] = 1;
 
                 if (Type == NodeType.And) boardCopy.P2Score += boardCopy.CalculatePoints(boardCopy.BoardTable, index);
                 else boardCopy.P1Score += boardCopy.CalculatePoints(boardCopy.BoardTable, index);
 
-                Node child = new Node(boardCopy, (Type == NodeType.And ? NodeType.Or : NodeType.And), this);
+                Node child = new Node(boardCopy, (Type == NodeType.And ? NodeType.Or : NodeType.And), this, index);
 
                 Children.Add(child);
             }

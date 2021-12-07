@@ -1,19 +1,23 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿
+using System;
 
 namespace Three_Six_Nine.PNS.Data
 {
     class Resource
     {
         private int maxAmount;
-        private int usedAmount;
+        private int usedAmount=0;
+
+
+        public Resource(int maxAmount)
+        {
+            this.maxAmount = maxAmount;
+        }
 
         public bool IsAvailable()
         {
-            return usedAmount++ > maxAmount;
+            //Console.WriteLine(usedAmount);
+            return usedAmount++ < maxAmount;
         }
 
         public void Reset()

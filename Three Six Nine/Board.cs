@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Collections.Generic;
+
 namespace Three_Six_Nine
 {
     class Board
@@ -106,7 +102,7 @@ namespace Three_Six_Nine
             boardCopy.P1Score = P1Score;
             boardCopy.P2Score = P2Score;
 
-            for(int i = 0; i <= BoardTable.Length; i++)
+            for(int i = 0; i <= BoardTable.Length-1; i++)
             {
                 boardCopy.BoardTable[i] = BoardTable[i];
             }

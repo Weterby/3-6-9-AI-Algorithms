@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
+using Three_Six_Nine.PNS;
+
 namespace Three_Six_Nine
 {
     public partial class Form1 : Form
@@ -155,10 +157,10 @@ namespace Three_Six_Nine
             {
                 foreach (Button b in buttons) b.Enabled = false;
             }
-            player1 = InitializePlayer(player1Type,2);
-            player2 = InitializePlayer(player2Type,2);
+            player1 = InitializePlayer(player1Type,1);
+            player2 = InitializePlayer(player2Type,1);
 
-            game = new Game(board, player1, player2, 100);
+            game = new Game(board, player1, player2, 10);
             if(player1!= null)
             {
                 game.StartSimulation();

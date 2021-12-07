@@ -1,19 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Three_Six_Nine.PNS.Data;
 
 namespace Three_Six_Nine.PNS
 {
     class ProofNumberSearch
     {
-        private Node root;
         private Resource resource;
-        public ProofNumberSearch()
+
+        internal Resource Resource { get => resource; set => resource = value; }
+
+        public ProofNumberSearch(Node root, int resourceAmount)
         {
-            resource = new Resource();
+            Resource = new Resource(resourceAmount);
         }
 
         private void ExpandNode(Node node)
@@ -147,19 +145,19 @@ namespace Three_Six_Nine.PNS
             return root;
         }
     
-        private Node Search(Node root)
+        public Node Search(Node root)
         {
             EvaluateNode(root);
             SetProofAndDisproofNumbers(root);
             Node current = root;
 
-            while(root.Proof != 0 && root.Disproof != 0 && resource.IsAvailable())
+            while(root.Proof != 0 && root.Disproof != 0 && Resource.IsAvailable())
             {
                 Node mostProving = SelectMostProvingNode(current);
                 ExpandNode(mostProving);
                 current = UpdateAncestors(mostProving, root);
             }
-
+            Resource.Reset();
             Node best = GetBestMove(root);
             return best;
         }
@@ -169,8 +167,8 @@ namespace Three_Six_Nine.PNS
             int playerScore = node.Board.P1Score;
             int aiScore = node.Board.P2Score;
 
-            if (aiScore - playerScore > 0) node.Value = NodeValue.Win;
-            else if (aiScore - playerScore < 0) node.Value = NodeValue.Lose;
+            if (aiScore - playerScore > 0 && node.Board.RemainingMoves() == 0) node.Value = NodeValue.Win;
+            else if (aiScore - playerScore < 0 && node.Board.RemainingMoves() == 0) node.Value = NodeValue.Lose;
             else node.Value = NodeValue.Unknown;
         }
 
@@ -184,7 +182,7 @@ namespace Three_Six_Nine.PNS
 
             foreach(Node child in root.Children)
             {
-                float childValue = (float)child.Disproof / (float)child.Proof;
+                float childValue = ((float)child.Disproof) / ((float)child.Proof) +0.001f;
                 if (childValue > value)
                 {
                     value = childValue;
